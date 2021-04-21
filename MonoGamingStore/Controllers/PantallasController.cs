@@ -23,6 +23,10 @@ namespace MonoGamingStore.Controllers
             return View();
         }
 
+        public IActionResult Graficas()
+        {
+            return View();
+        }
 
     }
 }
