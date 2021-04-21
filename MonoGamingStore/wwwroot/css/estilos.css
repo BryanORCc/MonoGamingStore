@@ -11,4 +11,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background: white;
+}
+
+.Titulo{
+  margin-right: 15px;
+  margin-left: 15px;
+  text-align: center;
+}
+
+span{
+  cursor: pointer;
 }
