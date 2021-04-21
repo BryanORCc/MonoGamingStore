@@ -1,0 +1,25 @@
+.fondo{
+  background: url("../img/f3.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+
+.prod{
+  border: 2px solid;
+}
+
+.product{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: white;
+}
+
+.Titulo{
+  margin-right: 15px;
+  margin-left: 15px;
+  text-align: center;
+}
+
+span{
+  cursor: pointer;
+}
