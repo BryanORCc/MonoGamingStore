@@ -35,9 +35,16 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - MonoGamingStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer" style="background: #414141">
+        <div class="row container col-12">
+            <div class="col-5 d-flex justify-content-center">
+                <p class="text-white">&copy; 2021 - MonoGamingStore</p>
+            </div>
+            <div class="col d-flex justify-content-around px-5">
+                <a class="text-white" asp-area="" asp-controller="Home" asp-action="Contactanos"> Contáctanos </a>
+                <a class="text-white" asp-area="" asp-controller="Home" asp-action="Somos"> ¿Quiénes Somos? </a>
+                <a class="text-white" asp-area="" asp-controller="Home" asp-action="Nosotros"> Acerca de Nosotros </a>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
