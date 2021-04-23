@@ -12,14 +12,30 @@
   flex-wrap: wrap;
   justify-content: center;
   background: white;
+  min-height: 100%;
 }
 
 .Titulo{
   margin-right: 15px;
   margin-left: 15px;
   text-align: center;
+  font-size: 100%;
+}
+
+.Precio{
+  font-size: 100%;
+}
+
+.Boton{
+  width: 100%;
+  height: 100%;
+  font-size: 70%;
 }
 
 span{
   cursor: pointer;
+}
+
+.estrellas{
+  font-size: 50%;
 }
