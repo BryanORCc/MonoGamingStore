@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MonoGamingStore</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="row justify-content-start">
+                    <div class="col-4">
+                        CARRITO DE COMPRAS
+                        <br>
+                        <img src="~/img/producto1.jpg" class="rounded float-start" alt="...">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="button" id="btn1" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+
+                    <div class="col-1">
+                        <br>
+                        <select class="form-select form-select-lg mb-3" id="selector-1" onchange="multiplicador1();"
+                            aria-label=".form-select-lg example">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-4">
+                            <br>
+                            SUBTOTAL
+                            <br>
+                            ENVIO
+                            <br>
+                            TOTAL
+                        </div>
+                        <div class="col-8">
+                            <br>
+                            <span id="precio-1">s/.90.00</span>
+                            <br>
+                            GRATIS
+                            <br>
+                            <span id="Pfinal-1">s/.100.00 (incluye IGV)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-2">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="row justify-content-start">
+                        <div class="col-4">
+                            <br>
+                            <img src="~/img/producto1.jpg" class="rounded float-start" alt="...">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="button" id="btn1" class="btn btn-warning">Eliminar</button>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <br>
+                            <select class="form-select form-select-lg mb-3" id="selector-2" onchange="multiplicador2();"
+                                aria-label=".form-select-lg example">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-4">
+                                <br>
+                                SUBTOTAL
+                                <br>
+                                ENVIO
+                                <br>
+                                TOTAL
+                            </div>
+                            <div class="col-8">
+                                <br>
+                                <span id="precio-2">s/.90.00</span>
+                                <br>
+                                GRATIS
+                                <br>
+                                <span id="Pfinal-2">s/.100.00 (incluye IGV)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-3">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="row justify-content-start">
+                            <div class="col-4">
+                                <br>
+                                <img src="~/img/producto1.jpg" class="rounded float-start" alt="...">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="button" id="btn1" class="btn btn-warning">Eliminar</button>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <br>
+                                <select class="form-select form-select-lg mb-3" id="selector-3"
+                                    onchange="multiplicador3();" aria-label=".form-select-lg example">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="col-4">
+                                    <br>
+                                    SUBTOTAL
+                                    <br>
+                                    ENVIO
+                                    <br>
+                                    TOTAL
+                                </div>
+                                <div class="col-8">
+                                    <br>
+                                    <span id="precio-3">s/.90.00</span>
+                                    <br>
+                                    GRATIS
+                                    <br>
+                                    <span id="Pfinal-3">s/.100.00 (incluye IGV)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-2">
+
+                        <button type="button" id="btn2" class="btn btn-success">Comprar</button>
+                        <a href="https://localhost:5001/"><button type="button" id="btn3" href="~/home/Index.cshtml"
+                                class="btn btn-warning">Salir</button> </a>
+                    </div>
+                </div>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></script>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                <script src="~/js/Ventas.js"></script>
+                <script src="~/js/alerta.js"></script>
+
+</body>
+
+</html>
