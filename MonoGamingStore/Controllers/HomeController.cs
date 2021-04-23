@@ -22,7 +22,8 @@ namespace MonoGamingStore.Controllers
         {
             return View();
         }
-        public IActionResult Contactanos()
+
+        public IActionResult Privacy()
         {
             return View();
         }
