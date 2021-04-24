@@ -27,6 +27,14 @@ namespace MonoGamingStore.Controllers
         {
             return View();
         }
+        public IActionResult Cases()
+        {
+            return View();
+        }
+        public IActionResult Procesadores()
+        {
+            return View();
+        }
 
     }
 }
