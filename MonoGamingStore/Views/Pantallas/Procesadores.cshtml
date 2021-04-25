@@ -13,49 +13,60 @@
     <h2 class="mt-5 text-light font-weight-bold display-4">PROCESADORES</h2>
 
     <div class="">
-        <div class="input-group col-md-4 my-3 float-right px-0"><!--Caja de busqueda-->
+        <div class="input-group my-3 px-0"><!--Caja de busqueda-->
             <input type="search" class="form-control rounded" placeholder="Buscar producto" aria-label="Busqueda" aria-describedby="search-addon" />
             <button type="button" class="btn btn-danger">buscar</button>
         </div>
 
-        <div class="input-group my-3"><!--Cajas para el filtro-->
-            <p class="form-control col-md-3 font-weight-bold">Precio</p>
-            <select class="custom-select col-md-3" required>
-                <option value="default">todos</option>
-                <option value="1">S/400 - S/900</option>
-                <option value="2">S/900 - S/1200</option>
-                <option value="3">S/1200 - S/1800</option>
-                <option value="4">S/1800 a mas</option>
-            </select>
+        <div class="filtro my-3"><!--Cajas para el filtro-->
 
-            <p class="form-control col-md-3 font-weight-bold ml-4">Marca</p>
-            <select class="custom-select col-md-3" required>
-                <option value="default">todos</option>
-                <option value="1">Intel</option>
-                <option value="2">AMD</option>
-            </select>
+            <div class="cajas1">
+                <p class="form-control font-weight-bold" style="width: 50%;">Precio</p>
+                <select class="custom-select " required style="width: 50%;">
+                    <option value="default">todos</option>
+                    <option value="1">S/400 - S/900</option>
+                    <option value="2">S/900 - S/1200</option>
+                    <option value="3">S/1200 - S/1800</option>
+                    <option value="4">S/1800 a mas</option>
+                </select>
+            </div>
+            
+            <div class="cajas1">
+                <p class="form-control font-weight-bold" style="width: 50%;">Marca</p>
+                <select class="custom-select " required style="width: 50%;">
+                    <option value="default">todos</option>
+                    <option value="1">Intel</option>
+                    <option value="2">AMD</option>
+                </select>
+            </div>
+            
+            <div class="cajas1">
+                <p class="form-control font-weight-bold" style="width: 50%;">Serie</p>
+                <select class="custom-select " required style="width: 50%;">
+                    <option value="default">todos</option>
+                    <option value="1">K</option>
+                    <option value="2">U</option>
+                    <option value="3">X</option>
+                    <option value="4">F</option>
+                </select>
+            </div>
+            
+            <div class="cajas1">
+                <p class="form-control font-weight-bold" style="width: 50%;">Tipo</p>
+                <select class="custom-select " required style="width: 50%;">
+                    <option value="default">todos</option>
+                    <option value="1">Celeron</option>
+                    <option value="2">i3</option>
+                    <option value="3">i5</option>
+                    <option value="4">i7</option>
+                    <option value="5">Athlon</option>
+                    <option value="6">Apu</option>
+                    <option value="7">Ryzen</option>
+                </select>
+            </div>
 
-            <p class="form-control col-md-3 font-weight-bold ml-4">Serie</p>
-            <select class="custom-select col-md-3" required>
-                <option value="default">todos</option>
-                <option value="1">K</option>
-                <option value="2">U</option>
-                <option value="3">X</option>
-                <option value="4">F</option>
-            </select>
-
-            <p class="form-control col-md-3 font-weight-bold ml-4">Tipo</p>
-            <select class="custom-select col-md-3" required>
-                <option value="default">todos</option>
-                <option value="1">Celeron</option>
-                <option value="2">i3</option>
-                <option value="3">i5</option>
-                <option value="4">i7</option>
-                <option value="5">Athlon</option>
-                <option value="6">Apu</option>
-                <option value="7">Ryzen</option>
-            </select>
         </div>
+
 
         <div class="objetos row">
             <div class="prod col-4 mr-auto">

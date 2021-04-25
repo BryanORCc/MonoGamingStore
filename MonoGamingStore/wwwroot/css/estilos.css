@@ -32,10 +32,43 @@
   font-size: 70%;
 }
 
-span{
-  cursor: pointer;
+.filtro{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.estrellas{
-  font-size: 50%;
+.cajas1{
+  display: flex;
+  flex-wrap: wrap;
+  width: 22%;
+  margin-left: 25px;
+}
+
+@media screen and (max-width: 500px){
+  .cajas1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    margin-left: 10px;
+  }
+
+  .form-control{
+    font-size: 10px;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 500px){
+  .cajas1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin-left: 10px;
+  }
+
+  .form-control{
+    font-size: 12px;
+    height: 80%;
+  }
 }
