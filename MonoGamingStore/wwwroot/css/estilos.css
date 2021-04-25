@@ -3,41 +3,14 @@
   background-size: cover;
 }
 
-.prod{
-  border: 2px solid;
-}
-
-.product{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background: white;
-  min-height: 100%;
-}
-
-.Titulo{
-  margin-right: 15px;
-  margin-left: 15px;
-  text-align: center;
-  font-size: 100%;
-}
-
-.Precio{
-  font-size: 100%;
-}
-
-.Boton{
-  width: 100%;
-  height: 100%;
-  font-size: 70%;
-}
-
+/*alineacion de la seccion filtros*/
 .filtro{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
+/*Cajas de los filtros*/
 .cajas1{
   display: flex;
   flex-wrap: wrap;
@@ -45,7 +18,45 @@
   margin-left: 25px;
 }
 
+/*Contenedor de los productos*/
+.objetos{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*Cajas de cada producto*/
+.product{
+  justify-content: center;
+  background: white;
+  width: 30%;
+}
+
+.btn{
+  margin-bottom: 25%;
+  width: 100%;
+  font-size: 70%;
+}
+
+.imagen{
+  width: 100%;
+  height: 70%;
+}
+
+.Titulo{
+  margin-right: 15%;
+  margin-left: 15%;
+  text-align: center;
+  font-size: 100%;
+  height: 100%;
+}
+.Precio{
+  font-size: 100%;
+}
+
+
+/*responsive para los filtros de productos*/
 @media screen and (max-width: 500px){
+  /*FILTRO*/
   .cajas1{
     display: flex;
     flex-wrap: wrap;
@@ -57,6 +68,30 @@
     font-size: 10px;
     height: 80%;
   }
+
+  /*PRODUCTOS*/
+  .product{
+    width: 40%;
+    height: auto;
+    min-height: 100%;
+    text-align: center;
+  }
+
+  .imagen{
+    width: 60%;
+    height: 30%;
+  }
+  
+  .Titulo{
+    margin-right: 15%;
+    margin-left: 15%;
+    text-align: center;
+    font-size: 100%;
+  }
+  .Precio{
+    font-size: 100%;
+  }
+
 }
 
 @media screen and (max-width: 800px) and (min-width: 500px){
@@ -72,3 +107,8 @@
     height: 80%;
   }
 }
+
+
+
+
+
