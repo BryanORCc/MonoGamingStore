@@ -3,39 +3,251 @@
   background-size: cover;
 }
 
-.prod{
-  border: 2px solid;
-}
-
-.product{
+/*alineacion de la seccion filtros*/
+.filtro{
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+}
+
+/*Cajas de los filtros*/
+.cajas1{
+  display: flex;
+  flex-wrap: wrap;
+  width: 22%;
+  margin-left: 25px;
+}
+
+/*Contenedor de los productos*/
+.objetos{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*Cajas de cada producto*/
+.product{
   justify-content: center;
   background: white;
-  min-height: 100%;
+  width: 30%;
+}
+
+.buscar{
+  width: 15%;
+  border: white 1px solid;
+  border-radius: 5%;
+}
+
+.btn{
+  margin-bottom: 25%;
+  width: 100%;
+  font-size: 70%;
+}
+
+.imagen{
+  width: 100%;
+  height: 70%;
 }
 
 .Titulo{
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 15%;
+  margin-left: 15%;
   text-align: center;
   font-size: 100%;
 }
-
 .Precio{
   font-size: 100%;
 }
 
-.Boton{
-  width: 100%;
-  height: 100%;
-  font-size: 70%;
+
+/*responsive para los filtros de productos*/
+/*Dispositivos de menos resolucion*/
+@media screen and (max-width: 420px) and (min-width: 180px) and (max-height: 1024px){
+  /*FILTRO*/
+  .cajas1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    margin-left: 10px;
+  }
+
+  .form-control{
+    font-size: 10px;
+    height: 80%;
+  }
+
+  /*PRODUCTOS*/
+  .product{
+    width: 40%;
+    height: auto;
+    min-height: 100%;
+    text-align: center;
+  }
+
+  .imagen{
+    margin-top: 5%;
+    width: 60%;
+    height: 30%;
+  }
+  
+  .Titulo{
+    margin-right: 15%;
+    margin-left: 15%;
+    text-align: center;
+    font-size: 100%;
+  }
+  .Precio{
+    font-size: 100%;
+  }
+  .etiqueta{
+    font-size: 200%;
+  }
+
 }
 
-span{
-  cursor: pointer;
+/*IPAD PRO*/
+@media screen and (min-width: 1000px) and (max-width: 1100px) and (min-height: 1366px){
+  .cajas1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin-left: 10px;
+  }
+
+  .form-control{
+    font-size: 20px;
+    height: 80%;
+  }
+  .custom-select{
+    font-size: 23px;
+  }
+
+  /*PRODUCTOS*/
+  .product{
+    width: 29%;
+    height: auto;
+    min-height: 100%;
+    text-align: center;
+  }
+
+  .imagen{
+    margin-top: 5%;
+    width: 80%;
+    height: 45%;
+  }
+  
+  .Titulo{
+    margin-right: 15%;
+    margin-left: 15%;
+    text-align: center;
+    font-size: 140%;
+  }
+  .Precio{
+    font-size: 130%;
+  }
+  .etiqueta{
+    font-size: 250%;
+  }
+  .btn{
+    margin-bottom: 25%;
+    width: 100%;
+    font-size: 130%;
+  }
 }
 
-.estrellas{
-  font-size: 50%;
+/*Tamaños medianos*/
+@media screen and (max-width: 768px) and (min-width: 500px) and (max-height: 1024px){
+  /*FILTRO*/
+  .cajas1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    margin-left: 10px;
+  }
+
+  .form-control{
+    font-size: 15px;
+    height: 74%;
+  }
+
+  /*PRODUCTOS*/
+  .product{
+    width: 28%;
+    height: auto;
+    min-height: 100%;
+    text-align: center;
+  }
+
+  .imagen{
+    margin-top: 5%;
+    width: 70%;
+    height: 40%;
+  }
+  
+  .Titulo{
+    margin-right: 15%;
+    margin-left: 15%;
+    text-align: center;
+    font-size: 100%;
+  }
+  .Precio{
+    font-size: 100%;
+  }
+  .etiqueta{
+    font-size: 200%;
+  }
+
+
+  /*SURFACE DUO dispositivo*/
+  @media screen and (min-width: 500px) and (max-width: 600px) and (min-height: 720px){
+    .cajas1{
+      display: flex;
+      flex-wrap: wrap;
+      width: 30%;
+      margin-left: 10px;
+    }
+  
+    .form-control{
+      font-size: 11px;
+      height: 80%;
+    }
+    .custom-select{
+      font-size: 14px;
+    }
+  
+    /*PRODUCTOS*/
+    .product{
+      width: 27%;
+      height: auto;
+      min-height: 100%;
+      text-align: center;
+    }
+  
+    .imagen{
+      margin-top: 5%;
+      width: 60%;
+      height: 30%;
+    }
+    
+    .Titulo{
+      margin-right: 15%;
+      margin-left: 15%;
+      text-align: center;
+      font-size: 100%;
+    }
+    .Precio{
+      font-size: 110%;
+    }
+    .etiqueta{
+      font-size: 200%;
+    }
+    .btn{
+      margin-bottom: 25%;
+      width: 100%;
+      font-size: 110%;
+    }
+  }
+
 }
+
+
+
