@@ -42,8 +42,17 @@
   </form>
 
   </nav> *@
-<br>
 
+<nav class="navbar navbar-light   ">
+  <div class="container-fluid">
+    <a class=""></a>
+    <form class="d-flex float-right">
+      <input class="form-control me-2" type="buscar" placeholder="buscar" aria-label="buscar">
+      <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+  </div>
+</nav>
+<br>
 
 <div class="container">
   <div class="row">
@@ -51,14 +60,14 @@
       <div class="card ">
         <div class="card-header">
           <h3>Lista de productos
-            <a href="" class="btn btn-success float-right -6">Agregar</a>
+            <a href="" class="btn btn-info float-right -6">Agregar</a>
 
           </h3>
 
         </div>
         <div class="card-body text-center">
           <div class="form-group row">
-            <label for="categoria" class="col-md-2">categoria</label>
+            <label for="categoria" class="col-md-2">Categoria</label>
             <div class="col-md-2">
               <select name="categoria" id="idcategoria" class="form-control">
               <option value="">Seleccionar</option>
@@ -69,10 +78,10 @@
             </select>
 
             </div>
-            
-
-
           </div>
+
+      <div class="table-responsive"> 
+
 
           <table class="table table-bordered table-sm">
 
@@ -97,7 +106,7 @@
                 <td>XXXX</td>
                 <td>XXXX</td>
                 <td>XXXX</td>
-                <td><button class="btn btn-info">Editar</button>
+                <td><button class="btn btn-success">Editar</button>
                   <button class="btn btn-danger">Eliminar</button>
                 </td>
 
@@ -110,14 +119,14 @@
                 <td>XXXX</td>
                 <td>XXXX</td>
                 <td>XXXX</td>
-                <td><button class="btn btn-info">Editar</button>
+                <td><button class="btn btn-success">Editar</button>
                   <button class="btn btn-danger">Eliminar</button>
                 </td>
 
               </tr>
-            </tbody>
 
           </table>
+           </div>
 
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-end">
