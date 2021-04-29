@@ -1,31 +1,142 @@
 <ul class="nav ">
   <li class="nav-item">
-    <a class="nav-link active text-dark-outline-primary form-control col-auto " asp-area="" asp-controller="Administrador" asp-action="Admin">Inicio</a>
+    <a class="nav-link active text-dark-outline-primary form-control col-auto " asp-area=""
+      asp-controller="Administrador" asp-action="Admin">Inicio</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador" asp-action="producto">Productos</a>
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="producto">Productos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador" asp-action="cliente">Clientes</a>
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="cliente">Clientes</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-dark form-control col-autop" asp-area="" asp-controller="Administrador" asp-action="ventas">Ventas/Pedidos</a>
+    <a class="nav-link text-dark form-control col-autop" asp-area="" asp-controller="Administrador"
+      asp-action="ventas">Ventas/Pedidos</a>
   </li>
   <li class="nav-item">
-     <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador" asp-action="proveedores">Proveedores</a>
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="proveedores">Proveedores</a>
   </li>
   <li class="nav-item">
-       <a class="nav-link text-dark form-control col-auto" asp-area="" asp-controller="Administrador" asp-action="mensajes">Mensajes</a>
+    <a class="nav-link text-dark form-control col-auto" asp-area="" asp-controller="Administrador"
+      asp-action="mensajes">Mensajes</a>
   </li>
 
 </ul>
 
 
 
-
-
 <BR></BR>
 
 
-
 <div class="p-3 mb-2 bg-danger text-white">PRODUCTO</div>
+
+
+@* <nav class="navbar navbar-expand-lg navbar">
+
+  <form class="d-flex">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+  </form>
+
+  </nav> *@
+<br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card ">
+        <div class="card-header">
+          <h3>Lista de productos
+            <a href="" class="btn btn-success float-right -6">Agregar</a>
+
+          </h3>
+
+        </div>
+        <div class="card-body text-center">
+          <div class="form-group row">
+            <label for="categoria" class="col-md-2">categoria</label>
+            <div class="col-md-2">
+              <select name="categoria" id="idcategoria" class="form-control">
+              <option value="">Seleccionar</option>
+              <option value="">xxxx</option>
+              <option value="">yyyy</option>
+              <option value="">vvvv</option>
+
+            </select>
+
+            </div>
+            
+
+
+          </div>
+
+          <table class="table table-bordered table-sm">
+
+            <thead>
+              <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>XXXX</th>
+                <th>XXXX</th>
+                <th>XXXX</th>
+                <th>opciones</th>
+              </tr>
+
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>01</td>
+                <td>jose</td>
+                <td>oquendo</td>
+                <td>XXXX</td>
+                <td>XXXX</td>
+                <td>XXXX</td>
+                <td><button class="btn btn-info">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+                </td>
+
+              </tr>
+
+              <tr>
+                <td>01</td>
+                <td>jose</td>
+                <td>oquendo</td>
+                <td>XXXX</td>
+                <td>XXXX</td>
+                <td>XXXX</td>
+                <td><button class="btn btn-info">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+                </td>
+
+              </tr>
+            </tbody>
+
+          </table>
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
