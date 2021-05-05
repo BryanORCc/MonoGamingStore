@@ -1,6 +1,5 @@
 
 
-
 <ul class="nav ">
   <li class="nav-item">
     <a class="nav-link active text-dark-outline-primary form-control col-auto " asp-area=""
@@ -40,12 +39,12 @@
 
   @* <nav class="navbar navbar-expand-lg navbar">
 
-    <form class="d-flex">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">BUSCAR</button>
-    </form>
+      <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+      </form>
 
-    </nav> *@
+      </nav> *@
 
   <nav class="  ">
     <div class="container-fluid">
@@ -57,7 +56,7 @@
     </div>
   </nav>
 
-  
+
   <br>
 
 <br>
@@ -118,8 +117,12 @@
                     <td>XXXX</td>
                     <td>XXXX</td>
                     <td>XXXX</td>
-                    <td><button class="btn btn-success" data-toggle="modal" data-target="#miModalproducto">Editar</button>
-                      <button class="btn btn-danger" data-toggle="modal"data-target="#exampleModalCenter">Eliminar</button>
+                    <td>
+
+                      <button class="btn btn-success" data-toggle="modal" data-target="#miModalproducto">Editar</button>
+                      <button class="btn btn-danger"  data-toggle="modal"  data-target="#eliminar">Eliminar</button>
+
+                
                     </td>
 
                   </tr>
@@ -131,7 +134,7 @@
                     <td>XXXX</td>
                     <td>XXXX</td>
                     <td>XXXX</td>
-                    <td><button class="btn btn-success" data-toggle="modal" data-bs-target="#staticBackdrop">Editar</button>
+                    <td><button class="btn btn-success">Editar</button>
                       <button class="btn btn-danger">Eliminar</button>
                     </td>
 
@@ -216,13 +219,13 @@
     </div>
   </div>
 
-
+</div>
 
 
   <!-- Modal Eliminar -->
 
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content " >
       <div class="modal-header">
@@ -235,12 +238,16 @@
        ¿Esta seguro que desea eliminar el producto seleccionado ?
            </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close" >Cancelar</button>
           <button type="button" class="btn btn-success">Aceptar</button>
-        </div>
+     </div>
       </div>
     </div>
   </div>
+
+
+</div>
+
 
 
 
