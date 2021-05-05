@@ -67,7 +67,7 @@
         <div class="card ">
           <div class="card-header">
             <h3>Lista de productos
-              <a href="" class="btn btn-info float-right -6">Agregar</a>
+              <a href="" class="btn btn-info float-right -6"  data-toggle="modal" data-target="#agregar">Agregar</a>
 
             </h3>
 
@@ -251,8 +251,52 @@
 
 
 
+<!---Modal agregar  --->
 
 
+
+
+<div class="modal fade" id="agregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content " >
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Agregar producto </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <div class="form-group row">
+            <label for="categoria" class=" col-3">Categoria </label>
+            <div class="col-9">
+                  <select name="categoria" id="idcategoria" class="form-control">
+                    <option value="">Seleccionar</option>
+                    <option value="">Monitores</option>
+                    <option value="">Teclados</option>
+                    <option value="">Case's</option>
+                    <option value="">Placas</option>
+                    <option value="">Tarjetas Graficas</option>
+                    <option value="">Memorias</option>
+                    <option value="">Componentes</option>
+                  </select>
+                </div>
+              </div>
+            @* input *@
+              <div class ="form-group row">
+                <label for="categoria" class=" col-3">Nombre </label>
+                <div class="col-9">
+                <input type="text" name="nombre" itemid="idnombre" class ="form-control" value="AOC">
+                 </div>           
+              </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+          <button type="button" class="btn btn-success">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 </body>
 
