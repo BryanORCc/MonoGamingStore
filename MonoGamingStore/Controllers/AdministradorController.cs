@@ -16,5 +16,29 @@ namespace MonoGamingStore.Controllers
         {
             return View();
         }
+         public IActionResult producto()
+        {
+            return View();
+        }
+         public IActionResult cliente()
+        {
+            return View();
+        }
+         public IActionResult ventas()
+        {
+            return View();
+        }
+         public IActionResult proveedores()
+        {
+            return View();
+        }
+         public IActionResult mensajes()
+        {
+            return View();
+        }
+
+
+
+        
     }
 }
