@@ -1,0 +1,304 @@
+<ul class="nav ">
+  <li class="nav-item">
+    <a class="nav-link active text-dark-outline-primary form-control col-auto " asp-area=""
+      asp-controller="Administrador" asp-action="Admin">Inicio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="producto">Productos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="cliente">Clientes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark form-control col-autop" asp-area="" asp-controller="Administrador"
+      asp-action="ventas">Ventas/Pedidos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="proveedores">Proveedores</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark form-control col-auto" asp-area="" asp-controller="Administrador"
+      asp-action="mensajes">Mensajes</a>
+  </li>
+
+</ul>
+
+
+
+<BR></BR>
+
+<body>
+
+  <div class="p-3 mb-2 bg-danger text-white">PRODUCTO</div>
+
+
+  @* <nav class="navbar navbar-expand-lg navbar">
+
+    <form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+    </form>
+
+    </nav> *@
+
+
+  <!--- buscador  ---->
+  <nav class="  ">
+    <div class="container-fluid">
+      <a class=""></a>
+      <form class="d-flex float-right">
+        <input class="form-control me-2" type="buscar" placeholder="buscar" aria-label="buscar">
+        <button class="btn btn-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+
+
+  <br>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card ">
+          <div class="card-header">
+            <h3>Lista de productos
+              <a href="" class="btn btn-info float-right -6" data-toggle="modal" data-target="#agregar">Agregar</a>
+
+            </h3>
+
+          </div>
+          <div class="card-body text-center">
+            <div class="form-group row">
+              <label for="categoria" class="col-md-2">Categoria</label>
+              <div class="col-md-2">
+                <select name="categoria" id="idcategoria" class="form-control">
+                  <option value="">Seleccionar</option>
+                  <option value="">Monitores</option>
+                  <option value="">Teclados</option>
+                  <option value="">Case's</option>
+                  <option value="">Placas</option>
+                  <option value="">Tarjetas Graficas</option>
+                  <option value="">Memorias</option>
+                  <option value="">Componentes</option>
+
+                </select>
+
+              </div>
+            </div>
+
+            <div class="table-responsive table-hover">
+
+
+              <table class="table table-bordered table-sm">
+
+                <thead>
+                  <tr>
+                    <th>Categoria </th>
+                    <th>Nombre</th>
+                    <th>xxxx</th>
+                    <th>Precio</th>
+                    <th>XXXX</th>
+                    <th>XXXX</th>
+                    <th>opciones</th>
+                  </tr>
+
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td>Monitores</td>
+                    <td>AOC</td>
+                    <td>xxxx</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                    <td>
+
+                      <button class="btn btn-success" data-toggle="modal" data-target="#miModalproducto">Editar</button>
+                      <button class="btn btn-danger" data-toggle="modal" data-target="#eliminar">Eliminar</button>
+
+
+                    </td>
+
+                  </tr>
+
+                  <tr>
+                    <td>Monitores</td>
+                    <td>AOC</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                    <td><button class="btn btn-success">Editar</button>
+                      <button class="btn btn-danger">Eliminar</button>
+                    </td>
+
+                  </tr>
+
+              </table>
+            </div>
+
+            <div class="table-responsive">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end ">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+
+
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- Modal Editar -->
+
+
+
+
+  <div class="modal fade" id="miModalproducto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel">Datos del producto </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group row">
+            <label for="categoria" class=" col-3">Categoria </label>
+            <div class="col-9">
+              <select name="categoria" id="idcategoria" class="form-control">
+                <option value="">Seleccionar</option>
+                <option value="">Monitores</option>
+                <option value="">Teclados</option>
+                <option value="">Case's</option>
+                <option value="">Placas</option>
+                <option value="">Tarjetas Graficas</option>
+                <option value="">Memorias</option>
+                <option value="">Componentes</option>
+              </select>
+            </div>
+          </div>
+          @* input *@
+          <div class="form-group row">
+            <label for="categoria" class=" col-3">Nombre </label>
+            <div class="col-9">
+              <input type="text" name="nombre" itemid="idnombre" class="form-control" value="AOC">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button type="button" class="btn btn-success">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Modal Eliminar -->
+
+
+  <div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">confirmacion de usuario </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ¿Esta seguro que desea eliminar el producto seleccionado ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+          <button type="button" class="btn btn-success">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+
+  <!---Modal agregar  --->
+
+
+
+
+  <div class="modal fade" id="agregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel">Agregar producto </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group row">
+            <label for="categoria" class=" col-3">Categoria </label>
+            <div class="col-9">
+              <select name="categoria" id="idcategoria" class="form-control">
+                <option value="">Seleccionar</option>
+                <option value="">Monitores</option>
+                <option value="">Teclados</option>
+                <option value="">Case's</option>
+                <option value="">Placas</option>
+                <option value="">Tarjetas Graficas</option>
+                <option value="">Memorias</option>
+                <option value="">Componentes</option>
+              </select>
+            </div>
+          </div>
+          @* input *@
+          <div class="form-group row">
+            <label for="categoria" class=" col-3">Nombre </label>
+            <div class="col-9">
+              <input type="text" name="nombre" itemid="idnombre" class="form-control" value="AOC">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button type="button" class="btn btn-success">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
