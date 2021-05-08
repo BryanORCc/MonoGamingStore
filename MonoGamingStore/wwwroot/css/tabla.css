@@ -1,0 +1,9 @@
+.table-container {
+  overflow-x: auto;
+  min-width: 800px;
+  max-width: 800px;
+}
+
+#span {
+  font-size: small;
+}
