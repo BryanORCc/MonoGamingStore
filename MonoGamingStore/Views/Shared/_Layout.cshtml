@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body style="background: url('../img/f3.jpg') no-repeat center fixed;
+<!--<body style="background: url('../img/f3.jpg') no-repeat center fixed;
   background-size: cover;
-}">
+}">-->
+<body >
+    <div id="video" class="embed-responsive embed-responsive-16by9">
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fLexgOxsZu0?start=2&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom mb-3" style="background-color: #424242">
             <div class="container">
@@ -72,5 +78,6 @@
     @await RenderSectionAsync("Scripts", required: false)
     
 </body>
+
 
 </html>

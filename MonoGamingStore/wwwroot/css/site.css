@@ -7,6 +7,14 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+/*Fondo Video Monos*/
+#video{
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+}
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
