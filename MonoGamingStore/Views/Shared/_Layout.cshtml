@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body style="background: url('../img/f3.jpg') no-repeat center fixed;
+<!--<body style="background: url('../img/f3.jpg') no-repeat center fixed;
   background-size: cover;
-}">
+}">-->
+<body >
+    <div id="video" class="embed-responsive embed-responsive-16by9">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fLexgOxsZu0?controls=0&amp;start=7&amp;autoplay=1&loop=1&playlist=fLexgOxsZu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+    </div>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom mb-3" style="background-color: #424242">
             <div class="container">
@@ -24,16 +30,18 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Ventas</a>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Administrador" asp-action="Admin">Administrador</a>
                         </li>
                         
                     </ul>
+
+                    <li class="nav-item text-center" style="width: 15%; list-style: none; filter: invert(1);" >
+                        <a class="nav-link text-dark align-items-end" asp-area="" asp-controller="Home" asp-action="Privacy">
+                        <img src="~/img/carrito de compras.png" width="75%"; height="75%" style="margin: 0%; filter: grayscale(1);"></a>
+                    </li>
                     <partial name="_LoginPartial"/>
                 </div>
             </div>
@@ -72,5 +80,6 @@
     @await RenderSectionAsync("Scripts", required: false)
     
 </body>
+
 
 </html>

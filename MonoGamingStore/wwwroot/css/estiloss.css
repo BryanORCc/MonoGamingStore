@@ -1,12 +1,20 @@
 .fondoo{
     background: url("../img/admin/fondoo.png") no-repeat center fixed;
-  background-size: cover;
+    background-size: cover;
 }
+
 .bloque
 {
-  text-align: center;
-
-
-
-
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 30%;
 }
+
+.cajas{
+  width: 100%;
+  font-size: 195%;
+}
+
