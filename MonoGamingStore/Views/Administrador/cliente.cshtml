@@ -1,22 +1,27 @@
-
 <ul class="nav ">
   <li class="nav-item">
-    <a class="nav-link active text-dark-outline-primary form-control col-auto " asp-area="" asp-controller="Administrador" asp-action="Admin">Inicio</a>
+    <a class="nav-link active text-dark-outline-primary form-control col-auto " asp-area=""
+      asp-controller="Administrador" asp-action="Admin">Inicio</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador" asp-action="producto">Productos</a>
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="producto">Productos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador" asp-action="cliente">Clientes</a>
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="cliente">Clientes</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-dark form-control col-autop" asp-area="" asp-controller="Administrador" asp-action="ventas">Ventas/Pedidos</a>
+    <a class="nav-link text-dark form-control col-autop" asp-area="" asp-controller="Administrador"
+      asp-action="ventas">Ventas/Pedidos</a>
   </li>
   <li class="nav-item">
-     <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador" asp-action="proveedores">Proveedores</a>
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="proveedores">Proveedores</a>
   </li>
   <li class="nav-item">
-       <a class="nav-link text-dark form-control col-auto" asp-area="" asp-controller="Administrador" asp-action="mensajes">Mensajes</a>
+    <a class="nav-link text-dark form-control col-auto" asp-area="" asp-controller="Administrador"
+      asp-action="mensajes">Mensajes</a>
   </li>
 
 </ul>
@@ -29,10 +34,10 @@
 
 <body>
 
-<div class="p-3 mb-2 bg-danger text-white">CLIENTES</div>
+  <div class="p-3 mb-2 bg-danger text-white">CLIENTES</div>
 
 
-<!--- buscador  ---->
+  <!--- buscador  ---->
   <nav class="  ">
     <div class="container-fluid">
       <a class=""></a>
@@ -55,7 +60,7 @@
           <div class="card-header">
             <h3>Lista de Clientes
               <a href="" class="btn btn-info float-right -6" data-toggle="modal" data-target="#agregar">Agregar</a>
-          
+
           </div>
 
           <div class="card-body text-center">
@@ -85,10 +90,10 @@
                     <td>xxxx</td>
                     <td>XXXX</td>
                     <td>XXXX</td>
-                     <!---por ahora --->
+                    <!---por ahora --->
                     <td> <span class="  badge  badge-success">Activo</span> </td>
-                   
-                   
+
+
                     <td>
 
                       <button class="btn btn-success" data-toggle="modal" data-target="#miModalproducto">Editar</button>
@@ -105,10 +110,10 @@
                     <td>XXXX</td>
                     <td>XXXX</td>
                     <td>XXXX</td>
-                     <!---por ahora --->
+                    <!---por ahora --->
                     <td><span class=" badge badge-danger">Inactivo</span></td>
-                    
-                    
+
+
 
                     <td><button class="btn btn-success">Editar</button>
                       <button class="btn btn-danger">Eliminar</button>
@@ -188,6 +193,46 @@
               <input type="text" name="nombre" itemid="idnombre" class="form-control" value="AOC">
             </div>
           </div>
+
+          <div class="form-group row">
+
+            <label class=" col-3">Apellidos </label>
+            <div class="col-9">
+              <input type="text" name="apellidos" itemid="idapellidos" class="form-control" value="">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class=" col-3">Tarjeta </label>
+            <div class="col-9">
+              <input type="text" name="tarjeta" itemid="idtarjeta" class="form-control" value="">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class=" col-3">xxxx </label>
+            <div class="col-9">
+              <input type="text" name="xxxx" itemid="idxxxx" class="form-control" value="">
+            </div>
+          </div>
+
+
+            <div class="form-group row">
+              <label  class="col-3">Estado de Cuenta</label>
+              <div class="col-9">
+                <select name="estado" id="idestado" class="form-control">
+                  <option value="">Seleccionar</option>
+                  <option value="">Activo</option>
+                  <option value="">Inactivo</option>
+                </select>
+              </div>
+            </div>
+
+
+
+
+
+
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
             <button type="button" class="btn btn-success">Aceptar</button>
@@ -261,11 +306,48 @@
           </div>
           @* input *@
           <div class="form-group row">
-            <label for="categoria" class=" col-3">Nombre </label>
+
+            <label class=" col-3">Nombre </label>
             <div class="col-9">
-              <input type="text" name="nombre" itemid="idnombre" class="form-control" value="AOC">
+              <input type="text" name="nombre" itemid="idnombre" class="form-control" value="">
             </div>
           </div>
+
+          <div class="form-group row">
+            <label class=" col-3">Apellidos </label>
+            <div class="col-9">
+              <input type="text" name="apellidos" itemid="idapellidos" class="form-control" value="">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class=" col-3">Tarjeta </label>
+            <div class="col-9">
+              <input type="text" name="tarjeta" itemid="idtarjeta" class="form-control" value="">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class=" col-3">xxxx </label>
+            <div class="col-9">
+              <input type="text" name="xxxx" itemid="idxxxx" class="form-control" value="">
+            </div>
+          </div>
+
+           <div class="form-group row">
+              <label  class="col-3">Estado de Cuenta</label>
+              <div class="col-9">
+                <select name="estado" id="idestado" class="form-control">
+                  <option value="">Seleccionar</option>
+                  <option value="">Activo</option>
+                  <option value="">Inactivo</option>
+                </select>
+              </div>
+            </div>
+
+
+
+
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
             <button type="button" class="btn btn-success">Aceptar</button>
@@ -277,9 +359,3 @@
   </div>
 
 </body>
-
-
-
-
-
-
