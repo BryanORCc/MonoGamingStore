@@ -8,23 +8,25 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
+
 <body style="background: url('../img/f3.jpg') no-repeat center fixed;
   background-size: cover;
 }">
-<!--
+    <!--
 <body >
     <div id="video" class="embed-responsive embed-responsive-16by9">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/fLexgOxsZu0?controls=0&amp;start=7&amp;autoplay=1&loop=1&playlist=fLexgOxsZu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
+
     </div>
 -->
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom mb-3" style="background-color: #424242">
             <div class="container">
                 <img src="~/img/logo.png" alt="LOGO" width="50">
-                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">MonoGamingStore</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home"
+                    asp-action="Index">MonoGamingStore</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
@@ -34,22 +36,23 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Administrador" asp-action="Admin">Administrador</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Administrador"
+                                asp-action="Admin">Administrador</a>
                         </li>
-                        
                     </ul>
-
-                    <li class="nav-item text-center" style="width: 15%; list-style: none; filter: invert(1);" >
-                        <a class="nav-link text-dark align-items-end" asp-area="" asp-controller="Home" asp-action="Privacy">
-                        <img src="~/img/carrito de compras.png" width="75%"; height="75%" style="margin: 0%; filter: grayscale(1);"></a>
+                    <li class="nav-item text-center" style="width: 15%; list-style: none; filter: invert(1);">
+                        <a class="nav-link text-dark align-items-end" asp-area="" asp-controller="ventas"
+                            asp-action="venta">
+                            <img src="~/img/carrito de compras.png" width="75%" ; height="75%"
+                                style="margin: 0%; filter: grayscale(1);"></a>
                     </li>
-                    <partial name="_LoginPartial"/>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
-        
+
 
         <main role="main" class="pb-3">
             @RenderBody()
@@ -79,7 +82,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-    
+
 </body>
 
 
