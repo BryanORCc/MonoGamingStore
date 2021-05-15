@@ -35,6 +35,10 @@ namespace MonoGamingStore.Controllers
         {
             return View();
         }
+        public IActionResult Detalle()
+        {
+            return View();
+        }
 
     }
 }
