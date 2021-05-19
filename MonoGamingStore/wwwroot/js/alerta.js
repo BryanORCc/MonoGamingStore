@@ -1,17 +1,18 @@
+document.write('<script src="~/js/Ventas.js"></script>');
 $("#btn1").click(function(){
     Swal.fire({
         title: "PRODUCTO ELIMINADO",
-        icon: 'error'
+        icon: 'error',
+        width:'45%'
         });
+       
 });
-
 $("#btn2").click(function(){
     Swal.fire({
         title: "PRODUCTO ELIMINADO",
         icon: 'error'
         });
 });
-
 $("#btn3").click(function(){
     Swal.fire({
         title: "PRODUCTO ELIMINADO",
@@ -19,9 +20,11 @@ $("#btn3").click(function(){
         });
 });
 
+/////////////formulario/////////////////
 $("#btn4").click(function(){
     Swal.fire({
-        title: "COMPRA PROCESADA",
+        title: "PRODUCTO ELIMINADO",
         icon: 'success'
         });
 });
+
