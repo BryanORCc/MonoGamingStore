@@ -8,5 +8,5 @@ dotnet tool install --global dotnet-aspnet-codegenerator --version 5.0.2
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.6
 
 ---Mostrar código de Register y Login---
-dotnet aspnet-codegenerator identity -dc MonoGamingStore.Data.ApplicationDbContext --files "Account.Register;Account.Login"ccount.Login"
+dotnet aspnet-codegenerator identity -dc MonoGamingStore.Data.ApplicationDbContext --files "Account.Register;Account.Login"
 
