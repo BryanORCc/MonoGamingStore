@@ -7,8 +7,8 @@ namespace MonoGamingStore.Models
     public class Contacto
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column ("Id")]
-        public int Id { get; set; }
+        [Column ("ContactoId")]
+        public int ContactoId { get; set; }
         // [Required(ErrorMessage ="Ingrese un mensaje, no sea tarao")]
         // [Display(Name ="Mensaje")]
         [Column("Mensaje")]

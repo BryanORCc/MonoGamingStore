@@ -36,12 +36,12 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.Id</td>
+            <td>@item.ContactoId</td>
             <td>@item.Mensaje</td>
             <td>@item.Fecha</td>
             <td>
               <form action="/Administrador/EliminarContacto" method="post" class="d-inline-block">
-                <input type="hidden" name="id" value="@item.Id" />
+                <input type="hidden" name="id" value="@item.ContactoId" />
                 <button class="btn btn-danger">Eliminar</button>
               </form>
             </td>

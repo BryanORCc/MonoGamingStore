@@ -14,10 +14,10 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
+            @Html.DisplayNameFor(model => model.ContactoId)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Id)
+            @Html.DisplayFor(model => model.ContactoId)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Mensaje)
@@ -34,7 +34,7 @@
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="ContactoId" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Mensajes">Regresar</a>
     </form>

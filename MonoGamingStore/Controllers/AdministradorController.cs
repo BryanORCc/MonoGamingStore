@@ -89,7 +89,7 @@ namespace MonoGamingStore.Controllers
         }
          public IActionResult Mensajes()
         {
-            var mensajes = _context.DataContactos.OrderBy(x => x.Id).ToList();
+            var mensajes = _context.DataContactos.OrderBy(x => x.ContactoId).ToList();
             return View(mensajes);
         }
 
@@ -102,7 +102,7 @@ namespace MonoGamingStore.Controllers
             }
 
             var contacto = await _context.DataContactos
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.ContactoId == id);
             if (contacto == null)
             {
                 return NotFound();
