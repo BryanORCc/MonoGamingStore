@@ -1,8 +1,13 @@
 @model Producto
+@{
+    ViewData["Title"] = "REGISTRAR PRODUCTO";
+}
+<div class="container row-1 my-4" style="background: #c00b0b">
+    <h1 class="text-center text-white px-3">@ViewData["Title"]</h1>
+</div>
 
-<h1>REGISTRAR PRODUCTO</h1>
-
-<form action="" method="post">
+<img class="mx-auto d-block" src="~/img/logo.png" style="height: 100px">
+<form class="text-white" action="" method="post">
     <div class="form-group">
         <label asp-for="Nombre">Nombre del Producto</label>
         <input asp-for="Nombre" class="form-control" placeholder="ingresar nombre del producto...">
