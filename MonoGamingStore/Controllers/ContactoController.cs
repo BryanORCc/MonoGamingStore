@@ -1,18 +1,34 @@
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MonoGamingStore.Data;
+using MonoGamingStore.Models;
 
 namespace MonoGamingStore.Controllers
 {
     public class ContactoController : Controller
     {
         private readonly ILogger<ContactoController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public ContactoController(ILogger<ContactoController> logger)
+        public ContactoController(ILogger<ContactoController> logger, ApplicationDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
         public IActionResult Index(){
+            var listaMensajes=_context.DataContactos.ToList();
             return View();
+        }
+        [HttpPost]
+        public IActionResult Index(Contacto c)
+        {
+            if (ModelState.IsValid) {
+                _context.Add(c);
+                _context.SaveChanges();
+                return RedirectToAction("Home/Index");
+            }
+            return View(c);
         }
 
     }

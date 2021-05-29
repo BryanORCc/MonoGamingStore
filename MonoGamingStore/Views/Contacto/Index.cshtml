@@ -1,7 +1,10 @@
+@model Contacto
+
 <div class="row-1 my-4" style="background: #c00b0b">
     <h1 class="text-center text-white px-3">CONTÁCTANOS</h1>
 </div>
 
+<form action="" method="post">
 <div class="row-11">
     <div class="form-group row m-2">
         <div class="container col-sm-2 mx-3 px-0">
@@ -47,7 +50,7 @@
         </div>
         <div class="container col-sm-9">
             <div class="row">
-                <textarea class="form-control my-1" style="width: 70%;" rows="5" id="comment"></textarea>
+                <textarea asp-for="Mensaje" class="form-control my-1" style="width: 70%;" rows="5" id="comment"></textarea>
             </div>
             <div class="row">
                 <button class="btn btn-primary">Enviar</button>
@@ -56,3 +59,5 @@
     </div>
 
 </div>
+
+</form>

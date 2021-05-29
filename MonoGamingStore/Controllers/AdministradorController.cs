@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MonoGamingStore.Models;
 
 namespace MonoGamingStore.Controllers
 {
     public class AdministradorController: Controller
     {
-                private readonly ILogger<AdministradorController> _logger;
+        private readonly ILogger<AdministradorController> _logger;
 
         public AdministradorController(ILogger<AdministradorController> logger)
         {
@@ -36,7 +37,6 @@ namespace MonoGamingStore.Controllers
         {
             return View();
         }
-
 
 
         
