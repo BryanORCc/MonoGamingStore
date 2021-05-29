@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -23,6 +24,7 @@ namespace MonoGamingStore.Controllers
         [HttpPost]
         public IActionResult Index(Contacto c)
         {
+            c.Fecha = DateTime.Now.ToString();
             if (ModelState.IsValid) {
                 _context.Add(c);
                 _context.SaveChanges();

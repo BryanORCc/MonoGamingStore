@@ -225,6 +225,10 @@ namespace MonoGamingStore.Migrations
                         .HasColumnName("Id")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+                    b.Property<string>("Fecha")
+                        .HasColumnType("text")
+                        .HasColumnName("Fecha");
+
                     b.Property<string>("Mensaje")
                         .HasColumnType("text")
                         .HasColumnName("Mensaje");

@@ -1,5 +1,7 @@
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MonoGamingStore.Data;
 using MonoGamingStore.Models;
 
 namespace MonoGamingStore.Controllers
@@ -7,10 +9,12 @@ namespace MonoGamingStore.Controllers
     public class AdministradorController: Controller
     {
         private readonly ILogger<AdministradorController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public AdministradorController(ILogger<AdministradorController> logger)
+        public AdministradorController(ILogger<AdministradorController> logger, ApplicationDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Admin()
@@ -33,9 +37,10 @@ namespace MonoGamingStore.Controllers
         {
             return View();
         }
-         public IActionResult mensajes()
+         public IActionResult Mensajes()
         {
-            return View();
+            var mensajes = _context.DataContactos.OrderBy(x => x.Id).ToList();
+            return View(mensajes);
         }
 
 

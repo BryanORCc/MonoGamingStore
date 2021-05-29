@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MonoGamingStore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210529014627_MigracionInicial")]
-    partial class MigracionInicial
+    [Migration("20210529025816_MigracionPrueba")]
+    partial class MigracionPrueba
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -226,6 +226,10 @@ namespace MonoGamingStore.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("Id")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Fecha")
+                        .HasColumnType("text")
+                        .HasColumnName("Fecha");
 
                     b.Property<string>("Mensaje")
                         .HasColumnType("text")

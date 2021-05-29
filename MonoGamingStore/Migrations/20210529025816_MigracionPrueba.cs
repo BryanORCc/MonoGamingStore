@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace MonoGamingStore.Migrations
 {
-    public partial class MigracionInicial : Migration
+    public partial class MigracionPrueba : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -53,7 +53,8 @@ namespace MonoGamingStore.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Mensaje = table.Column<string>(type: "text", nullable: true)
+                    Mensaje = table.Column<string>(type: "text", nullable: true),
+                    Fecha = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
