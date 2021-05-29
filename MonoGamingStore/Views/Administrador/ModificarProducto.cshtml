@@ -1,0 +1,33 @@
+@model Producto
+
+<h1>Editar Producto</h1>
+
+<form action="" method="post">
+    <input type="hidden" asp-for="ProductoId" />
+
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Foto">Foto del Producto</label>
+        <input asp-for="Foto" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Detalle">Detalle del Producto</label>
+        <input asp-for="Detalle" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Precio">Precio</label>
+        <input asp-for="Precio" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Categoria">Categoria</label>
+        <input asp-for="Categoria" class="form-control">
+    </div>
+
+    <button class="btn btn-primary">Modificar</button>
+</form>

@@ -15,5 +15,6 @@ namespace MonoGamingStore.Models
         public string Mensaje { get; set; }
         [Column("Fecha")]
         public string Fecha { get; set; }
+       
     }
 }

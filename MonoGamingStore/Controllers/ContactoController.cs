@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -9,6 +8,8 @@ using MonoGamingStore.Models;
 
 namespace MonoGamingStore.Controllers
 {
+    
+    
     public class ContactoController : Controller
     {
         private readonly ILogger<ContactoController> _logger;

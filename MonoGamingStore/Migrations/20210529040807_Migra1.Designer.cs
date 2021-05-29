@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MonoGamingStore.Data;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -9,9 +10,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MonoGamingStore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210529040807_Migra1")]
+    partial class Migra1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -217,27 +219,23 @@ namespace MonoGamingStore.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-<<<<<<< HEAD:MonoGamingStore/Migrations/ApplicationDbContextModelSnapshot.cs
             modelBuilder.Entity("MonoGamingStore.Models.Contacto", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ContactoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("Id")
+                        .HasColumnName("ContactoId")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<string>("Fecha")
-                        .HasColumnType("text")
-                        .HasColumnName("Fecha");
 
                     b.Property<string>("Mensaje")
                         .HasColumnType("text")
                         .HasColumnName("Mensaje");
 
-                    b.HasKey("Id");
+                    b.HasKey("ContactoId");
 
                     b.ToTable("t_contacto");
-=======
+                });
+
             modelBuilder.Entity("MonoGamingStore.Models.Producto", b =>
                 {
                     b.Property<int>("ProductoId")
@@ -269,7 +267,6 @@ namespace MonoGamingStore.Migrations
                     b.HasKey("ProductoId");
 
                     b.ToTable("t_producto");
->>>>>>> a5f52c6b6cf148ff58c48f0fe5d3381569862c34:MonoGamingStore/Data/Migrations/ApplicationDbContextModelSnapshot.cs
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
