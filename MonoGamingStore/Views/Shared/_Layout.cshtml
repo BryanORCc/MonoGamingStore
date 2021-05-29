@@ -34,18 +34,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-
-                        <li class="nav-item">
+                        <partial name="_MenuPartial" />
+                        @* <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Administrador"
                                 asp-action="Admin">Administrador</a>
-                        </li>
+                        </li> *@
                     </ul>
-                    <li class="nav-item text-center" style="width: 15%; list-style: none; filter: invert(1);">
-                        <a class="nav-link text-dark align-items-end" asp-area="" asp-controller="ventas"
+                    @* <div class="nav-item text-center" style="width: 15%; list-style: none; filter: invert(1);">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="ventas"
                             asp-action="venta">
-                            <img src="~/img/carrito de compras.png" width="75%" ; height="75%"
+                            <img src="~/img/carrito de compras.png" width="60px"
                                 style="margin: 0%; filter: grayscale(1);"></a>
-                    </li>
+                    </div> *@
                     <partial name="_LoginPartial" />
                 </div>
             </div>
