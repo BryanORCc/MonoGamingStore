@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MonoGamingStore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210529011435_Migracion1")]
-    partial class Migracion1
+    [Migration("20210529014627_MigracionInicial")]
+    partial class MigracionInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

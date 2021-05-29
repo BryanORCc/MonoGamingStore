@@ -26,9 +26,12 @@ namespace MonoGamingStore.Controllers
             if (ModelState.IsValid) {
                 _context.Add(c);
                 _context.SaveChanges();
-                return RedirectToAction("Home/Index");
+                return RedirectToAction("ConfirmacionContacto");
             }
             return View(c);
+        }
+        public IActionResult ConfirmacionContacto(){
+            return View();
         }
 
     }
