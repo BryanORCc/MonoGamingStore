@@ -17,18 +17,7 @@ namespace MonoGamingStore.Controllers
         }
 
         public IActionResult Index(){
-            var ListaContacto = _context.DataContactos.ToList();
             return View();
-        }
-
-        [HttpPost]
-        public IActionResult Index(Contacto c){
-            if(ModelState.IsValid){
-                _context.Add(c);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(c);
         }
 
     }
