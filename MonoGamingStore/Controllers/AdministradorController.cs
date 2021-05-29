@@ -1,5 +1,7 @@
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MonoGamingStore.Data;
 using MonoGamingStore.Models;
@@ -43,7 +45,34 @@ namespace MonoGamingStore.Controllers
             return View(mensajes);
         }
 
+        //-------------------DELETE
+        public async Task<IActionResult> EliminarContacto(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var contacto = await _context.DataContactos
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (contacto == null)
+            {
+                return NotFound();
+            }
+
+            return View(contacto);
+        }
+
+        // POST: Producto/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var contacto = await _context.DataContactos.FindAsync(id);
+            _context.DataContactos.Remove(contacto);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Mensajes));
+        }
         
     }
 }
