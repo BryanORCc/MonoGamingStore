@@ -1,3 +1,5 @@
+@model Contacto
+
 <div class="row-1 my-4" style="background: #c00b0b">
     <h1 class="text-center text-white px-3">CONTÁCTANOS</h1>
 </div>
@@ -38,6 +40,15 @@
                 <iframe class="my-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1913.5016895700317!2d-71.51127981648163!3d-16.424654779369813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424b9e57f30aef%3A0xa3cec09ddf11cabf!2sUrbanizacion%20Las%20Cucardas!5e0!3m2!1ses-419!2spe!4v1618988456732!5m2!1ses-419!2spe"
                 width="60%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
+
+            <form action="" method="POST">
+                <input asp-for="Mensaje" class="form-control">
+                <button class="btn btn-primary">Enviar</button>
+            </form>
+            
+            
         </div>
     </div>
+
+    
 </div>

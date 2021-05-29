@@ -12,5 +12,7 @@ namespace MonoGamingStore.Data
             : base(options)
         {
         }
+
+        public DbSet<MonoGamingStore.Models.Contacto> DataContactos { get; set; }
     }
 }

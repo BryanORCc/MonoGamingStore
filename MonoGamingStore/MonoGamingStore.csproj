@@ -15,6 +15,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.4" />
+    <PackageReference Include="microsoft.visualstudio.web.codegeneration.design" Version="5.0.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="5.0.6" />
   </ItemGroup>
 
 </Project>
