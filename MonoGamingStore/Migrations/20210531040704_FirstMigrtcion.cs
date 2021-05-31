@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace MonoGamingStore.Migrations
 {
-    public partial class Migra1 : Migration
+    public partial class FirstMigrtcion : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

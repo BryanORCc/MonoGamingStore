@@ -92,34 +92,15 @@ namespace MonoGamingStore.Controllers
             var mensajes = _context.DataContactos.OrderBy(x => x.ContactoId).ToList();
             return View(mensajes);
         }
+        //ELIMINAR PRODUCTO______________________________________________________
+        [HttpPost]
+        public IActionResult EliminarContacto(int id) {
+            var mensaje = _context.DataContactos.Find(id);
+            _context.Remove(mensaje);
+            _context.SaveChanges();
 
-        //-------------------DELETE
-        public async Task<IActionResult> EliminarContacto(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var contacto = await _context.DataContactos
-                .FirstOrDefaultAsync(m => m.ContactoId == id);
-            if (contacto == null)
-            {
-                return NotFound();
-            }
-
-            return View(contacto);
+            return RedirectToAction("mensajes");
         }
 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var contacto = await _context.DataContactos.FindAsync(id);
-            _context.DataContactos.Remove(contacto);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Mensajes));
-        }
-        
     }
 }

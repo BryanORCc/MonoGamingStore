@@ -6,7 +6,6 @@ namespace MonoGamingStore.Models
     public class Producto
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-
         [Column("ProductoId")]
         public int ProductoId { get; set; }
 
