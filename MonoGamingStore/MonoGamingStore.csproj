@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>aspnet-MonoGamingStore-1f78cf90-59c8-4780-9580-f1670df16a6b</UserSecretsId>
+    <UserSecretsId>aspnet-MonoGamingStore-8B85C9D1-710E-4352-98C4-E5E482C47D35</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
