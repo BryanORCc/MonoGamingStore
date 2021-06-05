@@ -27,4 +27,3 @@ jobs:
       run: |
         heroku container:push web -a $HEROKU_APP_NAME
         heroku container:release web -a $HEROKU_APP_NAME
-        . scl_source enable llvm-toolset-6.0 || true
