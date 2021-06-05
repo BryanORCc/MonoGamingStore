@@ -6,7 +6,7 @@ RUN dotnet restore
 
 COPY . ./
 RUN dotnet publish -c Release -o out
-RUN . scl_source enable llvm-toolset-6.0 || true
+
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
