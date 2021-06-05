@@ -87,3 +87,30 @@ div {
 img {
   margin-bottom: 15px;
 }
+
+/*ESTILO DE LA BARRA DE NAVEGACION*/
+.Barra a{
+  background-image: url("../img/fondo_barra.gif");
+  color: white;
+  text-shadow: greenyellow 2px 2px 25px;
+  font-weight: bold;
+  font-size: 180%;
+  width: 100%;
+}
+
+.Barra a p{
+  color: white;
+}
+
+.product{
+  background-image: url("../img/fondo_promo.gif");
+  background-size: cover;
+  padding: 0%;
+  margin: 0%;
+  opacity: 0.9;
+}
+
+.col{
+  padding-left: 0%;
+  padding-right: 0%;
+}
