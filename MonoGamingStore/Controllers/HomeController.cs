@@ -20,6 +20,7 @@ namespace MonoGamingStore.Controllers
 
         public IActionResult Index()
         {
+            //Agregar para jalar el dato del ID
             return View();
         }
 
