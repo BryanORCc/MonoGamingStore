@@ -29,11 +29,13 @@ namespace MonoGamingStore.Controllers
 
         public IActionResult Graficas()
         {
-            return View();
+            var graficas = _context.DataProductos.OrderBy(p => p.ProductoId).ToList();
+            return View(graficas);
         }
         public IActionResult Cases()
         {
-            return View();
+            var cases = _context.DataProductos.OrderBy(p => p.ProductoId).ToList();
+            return View(cases);
         }
         public IActionResult Procesadores()
         {

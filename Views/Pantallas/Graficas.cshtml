@@ -1,3 +1,5 @@
+@model List<Producto>
+
 <head>
     <link rel="stylesheet" href="~/css/estilos.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -65,50 +67,20 @@
             
         </div>
 
-
         <div class="objetos">
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/graficas/Asus RogStrix GeForce RTX 3060 12gb.png">
-                <p class="Titulo font-weight-bold">Asus RogStrix GeForce RTX 3060 12gb</p>
-                <p class="Precio text-danger text-center font-weight-bold">S/2400.00</p>
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/graficas/Asus RogStrix RTX 2080Ti 11gb.png">
-                <p class="Titulo font-weight-bold">Asus RogStrix RTX 2080Ti 11gb</p>
-                <p class="Precio text-danger text-center font-weight-bold">S/2500.95</p>  
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/graficas/Asus TUF gaming RTX 3080 gaming 10gb.png">
-                <p class="Titulo font-weight-bold">Asus TUF gaming RTX 3080 gaming 10gb</p>
-                <p class="Precio text-danger text-center font-weight-bold">S/5800.50</p>
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/graficas/EVGA GeForce GTX 1080Ti 16gb.png">
-                <p class="Titulo font-weight-bold">EVGA GeForce GTX 1080Ti 16gb</p>
-                <p class="Precio text-danger text-center font-weight-bold">S/2800.85</p>  
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/graficas/Gigabyte GeForce RTX 2060 6gb.png">
-                <p class="Titulo font-weight-bold">Gigabyte GeForce RTX 2060 6gb</p>
-                <p class="Precio text-danger text-center font-weight-bold">S/3200.00</p>
-                <button class="btn btn-primary ">Ver producto</button>
-            </div>
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/graficas/Gigabyte GeForce RTX 2070 Super 8gb.png">
-                <p class="Titulo font-weight-bold">Gigabyte GeForce RTX 2070 Super 8gb</p>
-                <p class="Precio text-danger text-center font-weight-bold">S/2600.00</p>
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
+            @foreach (var item in Model)
+            { 
+                @if(@item.Categoria.Equals("Grafica")){
+                    <div class="product m-3">   
+                        <img class="imagen" src="@item.Foto">
+                        <h4 class="text-center">@item.Nombre</h4>
+                        <p class="Titulo font-weight-bold">@item.Detalle</p>
+                        <p class="Precio text-danger text-center font-weight-bold">S/ @item.Precio</p>
+                        <a class="btn btn-primary" asp-controller="Pantallas" asp-action="Detalle">Ver producto</a>
+                    </div>
+                }
+            }
+            
         </div>
 
     </div>

@@ -1,3 +1,5 @@
+@model List<Producto>
+
 <head>
     <link rel="stylesheet" href="~/css/estilos.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -58,51 +60,26 @@
 
         </div>
 
-        <div class="objetos ">
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/cases/Case CoolerMaster H500P ARGB.png">
-                <p class="Titulo font-weight-bold">Case CoolerMaster H500P ARGB</p>
-                <p class="Precio text-danger text-center font-weight-bold">S/920.00</p>
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/cases/Case CoolerMaster TD500 Mesh White.png">
-                <p class="Titulo font-weight-bold">Case CoolerMaster TD500 Mesh White</p>
-                <p class="Precio text-danger text-center font-weight-bold ">S/1300.50</p>
-                <button class="btn btn-primary ">Ver producto</button>
-            </div>
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/cases/Case Cougar CONQUER Mid Tower.png" >
-                <p class="Titulo font-weight-bold">Case Cougar CONQUER Mid Tower</p>
-                <p class="Precio text-danger text-center font-weight-bold ">S/1600.50</p>
-                <button class="btn btn-primary ">Ver producto</button>
-            </div>
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/cases/Case Cougar Turret Tempered Glass.png">
-                <p class="Titulo font-weight-bold">Case Cougar Turret Tempered Glass</p>
-                <p class="Precio text-danger text-center font-weight-bold ">S/650.85</p>
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/cases/Case NZXT H510 Elite White & Black.png" width="100%" height="70%">
-                <p class="Titulo font-weight-bold">Case NZXT H510 Elite White & Black</p>
-                <p class="Precio text-danger text-center font-weight-bold mb-15">S/1430.00</p>
-                <button class="Boton btn btn-primary mb-4">Ver producto</button>
-            </div>
-
-            <div class="product m-3 ">
-                <img class="imagen" src="~/img/cases/Case NZXT Mini ITX CA-MANTW-W1.png" width="100%" height="70%">
-                <p class="Titulo font-weight-bold">Case NZXT Mini ITX CA-MANTA-W1</p>
-                <p class="Precio text-danger text-center font-weight-bold mb-15">S/550.00</p>
-                <button class="Boton btn btn-primary mb-4">Ver producto</button>
-            </div>
+        <div class="objetos">
+            @foreach (var item in Model)
+            { 
+                @if(@item.Categoria.Equals("Case")){
+                    <div class="product m-3">
+                        <img class="imagen" src="@item.Foto">
+                        <h4 class="text-center">@item.Nombre</h4>
+                        <p class="Titulo font-weight-bold">@item.Detalle</p>
+                        <p class="Precio text-danger text-center font-weight-bold">S/ @item.Precio</p>
+                        <a class="btn btn-primary" asp-controller="Pantallas" asp-action="Detalle">Ver producto</a>
+                        <!--
+                        <img class="imagen" src="~/img/monitores/ASUS ProArt Display PA247CV Full HD 23.8p.png">
+                        <p class="Titulo font-weight-bold">ASUS ProArt Display PA247CV Full HD 23.8p</p>
+                        <p class="Precio text-danger text-center font-weight-bold">S/1850.95</p>
+                        <a class="btn btn-primary" asp-controller="Pantallas" asp-action="Detalle">Ver producto</a>
+                        -->
+                    </div>
+                }
+            }
         </div>
 
     </div>
-    
 </body>

@@ -30,7 +30,14 @@
 
     <div class="form-group">
         <label asp-for="Categoria">Categoria</label>
-        <input asp-for="Categoria" class="form-control" placeholder="ingresar categoria del producto...">
+        <select class="custom-select form-control" asp-for="Categoria">
+            <option value="Monitor">Monitor</option>
+            <option value="Grafica">Grafica</option>
+            <option value="Case">Case</option>
+            <option value="Procesador">Procesador</option>
+            <option value="Ram">Ram</option>
+            <option value="Placa Madre">Placa Madre</option>
+        </select>
     </div>
 
     <button class="btn btn-primary">Registrar</button>

@@ -25,7 +25,7 @@ namespace MonoGamingStore.Controllers
         }
         
         public IActionResult producto(){
-            var productos = _context.DataProductos.OrderBy(p => p.Nombre).ToList();
+            var productos = _context.DataProductos.OrderBy(p => p.Categoria).ToList();
             return View(productos);
         }
 
