@@ -14,7 +14,7 @@
         <a class="nav-link text-dark form-control " style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Rams"><p>Ram</p></a>
         <a class="nav-link text-dark form-control " style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Placas"><p>Placas</p></a>
     </div>
-    <h2 class="etiqueta mt-5 text-light font-weight-bold display-4">CASES</h2>
+    <h2 class="etiqueta mt-5 text-light font-weight-bold display-4">RAM'S</h2>
 
     <div class="">
         <div class="input-group my-3 px-0"><!--Caja de busqueda-->
@@ -35,49 +35,18 @@
                 </select>
             </div>
             
-            <div class="cajas1">
-                <p class="form-control font-weight-bold" style="width: 50%;">Marca</p>
-                <select class="custom-select " required style="width: 50%;">
-                    <option value="default">todos</option>
-                    <option value="1">CoolerMaster</option>
-                    <option value="2">Cougar</option>
-                    <option value="3">NZXT</option>
-                    <option value="4">Halion</option>
-                    <option value="5">ReDragon</option>
-                    <option value="6">LianLi</option>
-                    <option value="7">AeroCool</option>
-                </select>
-            </div>
-            
-            <div class="cajas1">
-                <p class="form-control font-weight-bold" style="width: 50%;">Tamaño</p>
-                <select class="custom-select " required style="width: 50%;">
-                    <option value="default">todos</option>
-                    <option value="1">Mini ITX</option>
-                    <option value="2">Micro ATX</option>
-                    <option value="3">ATX</option>
-                    <option value="4">E ATX</option>
-                </select>
-            </div>
-
         </div>
 
         <div class="objetos">
             @foreach (var item in Model)
             { 
-                @if(@item.Categoria.Equals("Case")){
+                @if(@item.Categoria.Equals("Ram")){
                     <div class="product m-3">
                         <img class="imagen" src="@item.Foto">
                         <h4 class="text-center">@item.Nombre</h4>
                         <p class="Titulo font-weight-bold">@item.Detalle</p>
                         <p class="Precio text-danger text-center font-weight-bold">S/ @item.Precio</p>
                         <a class="btn btn-primary" asp-controller="Pantallas" asp-action="Detalle">Ver producto</a>
-                        <!--
-                        <img class="imagen" src="~/img/monitores/ASUS ProArt Display PA247CV Full HD 23.8p.png">
-                        <p class="Titulo font-weight-bold">ASUS ProArt Display PA247CV Full HD 23.8p</p>
-                        <p class="Precio text-danger text-center font-weight-bold">S/1850.95</p>
-                        <a class="btn btn-primary" asp-controller="Pantallas" asp-action="Detalle">Ver producto</a>
-                        -->
                     </div>
                 }
             }

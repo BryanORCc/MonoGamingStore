@@ -39,7 +39,18 @@ namespace MonoGamingStore.Controllers
         }
         public IActionResult Procesadores()
         {
-            return View();
+            var procesadores = _context.DataProductos.OrderBy(p => p.ProductoId).ToList();
+            return View(procesadores);
+        }
+        public IActionResult Rams()
+        {
+            var rams = _context.DataProductos.OrderBy(p => p.ProductoId).ToList();
+            return View(rams);
+        }
+        public IActionResult Placas()
+        {
+            var placas = _context.DataProductos.OrderBy(p => p.ProductoId).ToList();
+            return View(placas);
         }
         public IActionResult Detalle()
         {

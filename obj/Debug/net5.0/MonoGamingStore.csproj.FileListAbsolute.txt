@@ -211,3 +211,5 @@ D:\USMP lll\Programacion l\1.-LABORATORIO\Proyecto\MonoGamingStore\obj\Debug\net
 D:\USMP lll\Programacion l\1.-LABORATORIO\Proyecto\MonoGamingStore\obj\Debug\net5.0\ref\MonoGamingStore.dll
 D:\USMP lll\Programacion l\1.-LABORATORIO\Proyecto\MonoGamingStore\obj\Debug\net5.0\MonoGamingStore.pdb
 D:\USMP lll\Programacion l\1.-LABORATORIO\Proyecto\MonoGamingStore\obj\Debug\net5.0\MonoGamingStore.genruntimeconfig.cache
+D:\USMP lll\Programacion l\1.-LABORATORIO\Proyecto\MonoGamingStore\obj\Debug\net5.0\Razor\Views\Pantallas\Rams.cshtml.g.cs
+D:\USMP lll\Programacion l\1.-LABORATORIO\Proyecto\MonoGamingStore\obj\Debug\net5.0\Razor\Views\Pantallas\Placas.cshtml.g.cs
