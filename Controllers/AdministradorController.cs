@@ -56,6 +56,10 @@ namespace MonoGamingStore.Controllers
             if (ModelState.IsValid) {
                 var producto = _context.DataProductos.Find(p.ProductoId);
                 producto.Nombre = p.Nombre;
+                producto.Foto = p.Foto;
+                producto.Detalle = p.Detalle;
+                producto.Precio = p.Precio;
+                producto.Categoria = p.Categoria;
                 _context.SaveChanges();
                 return RedirectToAction("producto");
             }

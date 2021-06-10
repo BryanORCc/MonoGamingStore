@@ -1,3 +1,5 @@
+@model List<Producto>
+
 <head>
     <link rel="stylesheet" href="~/css/estilos.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -77,52 +79,27 @@
             
         </div>
 
+          
         <div class="objetos">
+            @foreach (var item in Model)
+            { 
             <div class="product m-3">
+                <img class="imagen" src="@item.Foto">
+                <h4 class="text-center">@item.Nombre</h4>
+                <p class="Titulo font-weight-bold">@item.Detalle</p>
+                <p class="Precio text-danger text-center font-weight-bold">S/ @item.Precio</p>
+                <a class="btn btn-primary" asp-controller="Pantallas" asp-action="Detalle">Ver producto</a>
+                <!--
                 <img class="imagen" src="~/img/monitores/ASUS ProArt Display PA247CV Full HD 23.8p.png">
                 <p class="Titulo font-weight-bold">ASUS ProArt Display PA247CV Full HD 23.8p</p>
                 <p class="Precio text-danger text-center font-weight-bold">S/1850.95</p>
                 <a class="btn btn-primary" asp-controller="Pantallas" asp-action="Detalle">Ver producto</a>
+                -->
             </div>
-
-            <div class="product m-3">
-                <img class="imagen" src="~/img/monitores/ASUS TUF VG27VQ Full HD 27p 1ms 165Hz.png">
-                <p class="Titulo font-weight-bold">ASUS TUF VG27VQ Full HD 27p 1ms 165Hz</p>
-                <p class="Precio text-danger text-center font-weight-bold">S/2650.95</p>
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
-
-            <div class="product m-3">
-                <img class="imagen" src="~/img/monitores/ASUS VG278Q Full HD 27p 1ms 144Hz.png">
-                <p class="Titulo font-weight-bold">ASUS VG278Q Full HD 27p 1ms GSync 144Hz</p>
-                <p class="Precio text-danger text-center font-weight-bold ">S/2150.95</p>
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
-
-            <div class="product m-3">
-                <img class="imagen" src="~/img/monitores/BENQ PD2700Q QHD sRGB 27p.png">
-                <p class="Titulo font-weight-bold">BENQ PD2700Q QHD sRGB 27p AURA GSync</p>
-                <p class="Precio text-danger text-center font-weight-bold ">S/1630.56</p>
-                <button class="btn btn-primary ">Ver producto</button>
-            </div>
-
-            <div class="product m-3">
-                <img class="imagen" src="~/img/monitores/BENQ PD2700U 4K 27p sRGB.png">
-                <p class="Titulo font-weight-bold">BENQ PD2700U 4K 27p sRGB 1ms 144Hz GSync Diseño Grafico</p>
-                <p class="Precio text-danger text-center font-weight-bold">S/1840.00</p>
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
-
-            <div class="product m-3">
-                <img class="imagen" src="~/img/monitores/MSI Curved MAG271C Full HD 144Hz FreeSync.png">
-                <p class="Titulo font-weight-bold">MSI Curved MAG271C Full HD 144Hz FreeSync</p>
-                <p class="Precio text-danger text-center font-weight-bold ">S/3550.00</p>
-                <button class="btn btn-primary ">Ver producto</button>
-            </div>
+            }
+            
         </div>
-
     </div>
-    
 </body>
 
 
