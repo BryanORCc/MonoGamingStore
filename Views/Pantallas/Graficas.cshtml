@@ -78,7 +78,7 @@
                         <h4 class="text-center">@item.Nombre</h4>
                         <p class="Titulo font-weight-bold">@item.Detalle</p>
                         <p class="Precio text-danger text-center font-weight-bold">S/ @item.Precio</p>
-                        <a class="btn btn-primary" asp-controller="Pantallas" asp-action="Detalle">Ver producto</a>
+                        <a href="/Pantallas/Detalle/@item.ProductoId" class="btn btn-secondary">Ver Detalle</a>
                     </div>
                 }
             }
