@@ -52,8 +52,31 @@ namespace MonoGamingStore.Controllers
             var placas = _context.DataProductos.OrderBy(p => p.ProductoId).ToList();
             return View(placas);
         }
-        public IActionResult Detalle()
+        public IActionResult Detalle(int id)
         {
+            var nombre = "";
+            var foto = "";
+            var detalle = "";
+            var precio = 0.0;
+            var categoria = "";
+            var producto = _context.DataProductos.OrderBy(p => p.ProductoId).ToList();
+            foreach (var item in producto)
+            {
+                if(item.ProductoId == id){
+                    nombre = item.Nombre;
+                    foto = item.Foto;
+                    detalle = item.Detalle;
+                    precio = item.Precio;
+                    categoria = item.Categoria;
+                    break;
+                }
+            }
+            ViewData["nombre"] = nombre;
+            ViewData["foto"] = foto;
+            ViewData["detalle"] = detalle;
+            ViewData["precio"] = precio;
+            ViewData["categoria"] = categoria;
+
             return View();
         }
 

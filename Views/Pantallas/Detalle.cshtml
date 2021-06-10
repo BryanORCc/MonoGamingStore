@@ -6,40 +6,10 @@
 
 <div class="d-flex flex-wrap">
     <div class="caja1">
-        <img class="imagen" src="~/img/monitores/ASUS ProArt Display PA247CV Full HD 23.8p.png"><br>
-
-        <a class="text-white " style="font-weight: bold; margin-right: 5%;" href="#caracteristicas" aria-controls="caracteristicas" role="tab" data-toggle="tab" aria-expanded="true">CARACTERISTICAS DEL PRODUCTO</a>
-        <a class="text-white" style="font-weight: bold;" href="#descripcion" aria-controls="descripcion" role="tab" data-toggle="tab" aria-expanded="true">DESCRIPCION DEL PRODUCTO</a> <br>
-        <br>
-
-        <div class="tab-content">
-            <div id="caracteristicas" role="tabpanel" class="tab-pane active">
-                <p class="text-white">
-                    <strong>Marca:</strong> ASUS<br>
-                    <strong>Peso:</strong> 50 Gr<br>
-                    <strong>Código del producto:</strong> 90LM03Y1-B01370<br>
-                    <strong>Código EAN/UPC:</strong> 4718017886864<br>
-                    <strong>Part number:</strong> 90LM03Y1-B01370<br>
-                    <strong>Stock disponible:</strong> 78<br>
-                </p>
-            </div>
-
-            <div id="descripcion" role="tabpanel" class="tab-pane">
-                <p class="text-white">
-                    <strong>Diagonal de la pantalla:</strong> 60,5 cm (23.8")<br>
-                    <strong>Resolución de la pantalla:</strong> 1920 x 1080 Pixeles<br>
-                    <strong>Relación de aspecto nativa:</strong> 16:9<br>
-                    <strong>Tipo de pantalla:</strong> IPS<br>
-                    <strong>Brillo de la pantalla (típico):</strong> 300 cd / m²<br>
-                    <strong>Tiempo de respuesta:</strong> 5 ms<br>
-                    <strong>Tipo HD:</strong> Full HD<br>
-                    <strong>Tecnología de visualización:</strong> LED<br>
-                    <strong>Forma de la pantalla:</strong> Plana<br>
-                    <strong>Razón de contraste (típica):</strong> 1000:1<br>
-                    <strong>Máxima velocidad de actualización:</strong> 75 Hz<br>
-                </p>
-            </div>
-        </div>
+        <img class="imagen" width="50%" src='@ViewData["foto"]'><br>
+        <h3>@ViewData["nombre"]</h3>
+        <p>@ViewData["precio"]</p>
+        <p>@ViewData["detalle"]</p>
     </div>
 
     <div class="caja2">
