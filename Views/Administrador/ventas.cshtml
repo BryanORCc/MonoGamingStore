@@ -1,0 +1,324 @@
+<ul class="nav ">
+  <li class="nav-item">
+    <a class="nav-link active text-dark-outline-primary form-control col-auto " asp-area=""
+      asp-controller="Administrador" asp-action="Admin">Inicio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="producto">Productos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="cliente">Clientes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark form-control col-autop" asp-area="" asp-controller="Administrador"
+      asp-action="ventas">Ventas/Pedidos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark form-control col-auto " asp-area="" asp-controller="Administrador"
+      asp-action="proveedores">Proveedores</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark form-control col-auto" asp-area="" asp-controller="Administrador"
+      asp-action="mensajes">Mensajes</a>
+  </li>
+
+</ul>
+
+
+
+
+
+<BR></BR>
+
+
+
+<div class="p-3 mb-2 bg-danger text-white">VENTAS/PEDIDOS </div>
+
+<body>
+
+
+
+
+  <ul class="nav nav-tabs">
+    <li class=" nav-item active "><a class=" nav-link text-dark-outline-primary form-control col-auto" href="#ventas"
+        data-toggle="tab">VENTAS</a></li>
+    <li class=" nav-item "><a class="nav-link text-dark-outline-primary form-control col-auto" href="#pedidos"
+        data-toggle="tab">PEDIDOS</a></li>
+
+  </ul>
+
+
+
+
+
+
+  <div class="tab-content">
+
+    <!---lista de ventas  ---->
+
+
+    <div class="tab-pane fade" id="ventas">
+
+      <BR>
+
+      <div>
+
+
+        <div class="table-responsive table-hover">
+
+
+
+          <div>
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card ">
+                    <div class="card-header">
+                      <h3>Lista de Ventas 
+                        <a href="" class="btn btn-info float-right -6" data-toggle="modal"
+                          data-target="#agregar">Agregar</a>
+
+                    </div>
+
+                    <div class="card-body text-center">
+
+                      <div class="table-responsive table-hover">
+
+
+                        <table class="table table-bordered table-sm">
+
+                          <thead>
+                            <tr>
+                              <th>Id </th>
+                              <th>Descripcion </th>
+                              <th> Precio</th>
+                              <th>Cantidad </th>
+                              <th>Sub Total</th>
+                              <th>Estado</th>
+                              <th>opciones</th>
+                            </tr>
+
+                          </thead>
+                          <tbody>
+
+                            <tr>
+                              <td>xxx</td>
+                              <td>xxx</td>
+                              <td>xxxx</td>
+                              <td>XXXX</td>
+                              <td>XXXX</td>
+                              <!---por ahora --->
+                              <td> <span class="  badge  badge-success">Activo</span> </td>
+
+
+                              <td>
+
+                                <button class="btn btn-warning" data-toggle="modal"
+                                  data-target="#miModalproducto">Editar</button>
+                                <button class="btn btn-danger" data-toggle="modal"
+                                  data-target="#eliminar">Eliminar</button>
+
+
+                              </td>
+
+                            </tr>
+
+                            <tr>
+                              <td>xxxx</td>
+                              <td>xx</td>
+                              <td>XXXX</td>
+                              <td>XXXX</td>
+                              <td>XXXX</td>
+                              <!---por ahora --->
+                              <td><span class=" badge badge-danger">Inactivo</span></td>
+
+
+
+                              <td><button class="btn btn-warning">Editar</button>
+                                <button class="btn btn-danger">Eliminar</button>
+                              </td>
+
+                            </tr>
+
+                        </table>
+                      </div>
+
+                      <div class="card-footer  bg-transparent  border-success">
+
+                
+                       <input type="text" name="nombre" value="" class="btn btn-outline-danger float-right -6" required  placeholder="S/.0.00" >Total</input>
+
+                      </div>
+                      <br>
+
+                      <div class="table-responsive">
+                        <nav aria-label="Page navigation example">
+                          <ul class="pagination justify-content-end ">
+                            <li class="page-item disabled">
+                              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">Next</a>
+                            </li>
+                          </ul>
+                        </nav>
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!---lista de productos  ---->
+
+
+    <div class="tab-pane fade" id="pedidos">
+
+      <BR>
+
+      <div>
+
+
+        <div class="table-responsive table-hover">
+
+
+
+          <div>
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card ">
+                    <div class="card-header">
+                      <h3>Lista de Pedidos
+                        <a href="" class="btn btn-info float-right -6" data-toggle="modal"
+                          data-target="#agregar">Agregar</a>
+
+                    </div>
+
+                    <div class="card-body text-center">
+
+                      <div class="table-responsive table-hover">
+
+
+                        <table class="table table-bordered table-sm">
+
+                          <thead>
+                            <tr>
+                              <th>Id </th>
+                              <th>Nombre</th>
+                              <th>Apellidos</th>
+                              <th>Tarjeta</th>
+                              <th> xxxxx</th>
+                              <th>Estado de Cuenta</th>
+                              <th>opciones</th>
+                            </tr>
+
+                          </thead>
+                          <tbody>
+
+                            <tr>
+                              <td>xxx</td>
+                              <td>xxx</td>
+                              <td>xxxx</td>
+                              <td>XXXX</td>
+                              <td>XXXX</td>
+                              <!---por ahora --->
+                              <td> <span class="  badge  badge-success">Activo</span> </td>
+
+
+                              <td>
+
+                                <button class="btn btn-warning" data-toggle="modal"
+                                  data-target="#miModalproducto">Editar</button>
+                                <button class="btn btn-danger" data-toggle="modal"
+                                  data-target="#eliminar">Eliminar</button>
+
+
+                              </td>
+
+                            </tr>
+
+                            <tr>
+                              <td>xxxx</td>
+                              <td>xx</td>
+                              <td>XXXX</td>
+                              <td>XXXX</td>
+                              <td>XXXX</td>
+                              <!---por ahora --->
+                              <td><span class=" badge badge-danger">Inactivo</span></td>
+
+
+
+                              <td><button class="btn btn-warning">Editar</button>
+                                <button class="btn btn-danger">Eliminar</button>
+                              </td>
+
+                            </tr>
+
+                        </table>
+                      </div>
+
+                      <div class="table-responsive">
+                        <nav aria-label="Page navigation example">
+                          <ul class="pagination justify-content-end ">
+                            <li class="page-item disabled">
+                              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">Next</a>
+                            </li>
+                          </ul>
+                        </nav>
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
