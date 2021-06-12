@@ -14,76 +14,102 @@
         <a class="nav-link text-dark form-control " style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Rams"><p>Ram</p></a>
         <a class="nav-link text-dark form-control " style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Placas"><p>Placas</p></a>
     </div>
-    <h2 class="etiqueta mt-5 text-light font-weight-bold display-4">GRAFICAS</h2>
 
-    <form asp-controller="Pantallas" asp-action="Graficas" class="input-group my-3 px-0">    
+    <div>
+        <img class="mx-auto d-block" src="~/img/logo.png" height="150px">
+        <h1 class="text-center text-danger">PRODUCTO NO ENCONTRADO</h1>
+    </div>
+
+    @* <h2 class="etiqueta mt-5 text-light font-weight-bold display-4">MONITORES</h2> *@
+    
+    @* <form asp-controller="Pantallas" asp-action="Monitores" class="input-group my-3 px-0">    
         <input name="x" class="form-control rounded" type="text" placeholder="Buscar producto" aria-label="Busqueda">
         <button class="buscar btn-danger" type="submit">Buscar</button>                      
-    </form>
-
-    <div class="">
+    </form> *@
+    
+    @* <div class="">
         <div class="filtro my-3"><!--Cajas para el filtro-->
-            <div class="cajas1">
+            <form class="cajas1" >
                 <p class="form-control font-weight-bold" style="width: 50%;">Precio</p>
                 <select class="custom-select " required style="width: 50%;">
                     <option value="default">todos</option>
-                    <option value="1">S/400 - S/900</option>
-                    <option value="2">S/900 - S/1500</option>
-                    <option value="3">S/1500 - S/1900</option>
-                    <option value="4">S/1900 a mas</option>
+                    <option value="1">S/200 - S/350</option>
+                    <option value="2">S/350 - S/600</option>
+                    <option value="3">S/600 - S/900</option>
+                    <option value="4">S/900 a mas</option>
                 </select>
-            </div>
-            
-            <div class="cajas1">
+            </form>
+
+            <div class="cajas1" >
                 <p class="form-control font-weight-bold" style="width: 50%;">Marca</p>
                 <select class="custom-select " required style="width: 50%;">
                     <option value="default">todos</option>
                     <option value="1">Asus</option>
-                    <option value="2">Zotac</option>
-                    <option value="3">Gigabyte</option>
-                    <option value="4">Msi</option>
+                    <option value="2">Dell</option>
+                    <option value="3">BenQ</option>
+                    <option value="4">Sony</option>
+                    <option value="5">AOC</option>
+                    <option value="6">LG</option>
+                    <option value="7">HP</option>
+                    <option value="8">Lenovo</option>
+                    <option value="9">Acer</option>
+                    <option value="10">Gigabyte</option>
+                    <option value="11">SamSung</option>
+                    <option value="12">Msi</option>
                 </select>
             </div>
 
-            <div class="cajas1">
-                <p class="form-control font-weight-bold" style="width: 50%;">Modelo</p>
+            <div class="cajas1" >
+                <p class="form-control font-weight-bold " style="width: 50%;">Pantalla</p>
                 <select class="custom-select " required style="width: 50%;">
                     <option value="default">todos</option>
-                    <option value="1">Gt</option>
-                    <option value="2">Radeon</option>
-                    <option value="3">RX</option>
-                    <option value="4">GTX</option>
-                    <option value="5">RTX</option>
+                    <option value="1">15 pulgadas</option>
+                    <option value="2">17 pulgadas</option>
+                    <option value="3">19 pulgadas</option>
+                    <option value="4">21 pulgadas</option>
+                    <option value="5">27 pulgadas</option>
+                    <option value="5">32 pulgadas</option>
                 </select>
             </div>
-
-            <div class="cajas1">
-                <p class="form-control font-weight-bold" style="width: 50%;">Fabricante</p>
+            
+            <div class="cajas1" >
+                <p class="form-control font-weight-bold " style="width: 50%;">Resolucion</p>
                 <select class="custom-select " required style="width: 50%;">
                     <option value="default">todos</option>
-                    <option value="1">NVidia</option>
-                    <option value="2">AMD</option>
+                    <option value="1">HD</option>
+                    <option value="2">Full HD</option>
+                    <option value="3">Ultra HD</option>
+                    <option value="4">4K</option>
+                    <option value="5">8K</option>
                 </select>
             </div>
             
         </div>
 
+          
         <div class="objetos">
             @foreach (var item in Model)
             { 
-                @if(@item.Categoria.Equals("Grafica")){
-                    <div class="product m-3">   
+                @if(@item.Categoria.Equals("Monitor")){
+                    <div class="product m-3">
                         <img class="imagen" src="@item.Foto">
                         <h4 class="text-center">@item.Nombre</h4>
                         <p class="Titulo font-weight-bold">@item.Detalle</p>
                         <p class="Precio text-danger text-center font-weight-bold">S/ @item.Precio</p>
                         <a href="/Pantallas/Detalle/@item.ProductoId" class="btn btn-secondary">Ver Detalle</a>
+                        <!--
+                        <img class="imagen" src="~/img/monitores/ASUS ProArt Display PA247CV Full HD 23.8p.png">
+                        <p class="Titulo font-weight-bold">ASUS ProArt Display PA247CV Full HD 23.8p</p>
+                        <p class="Precio text-danger text-center font-weight-bold">S/1850.95</p>
+                        <a class="btn btn-primary" asp-controller="Pantallas" asp-action="Detalle">Ver producto</a>
+                        -->
                     </div>
                 }
             }
-            
         </div>
-
-    </div>
-    
+    </div> *@
 </body>
+
+
+    
+

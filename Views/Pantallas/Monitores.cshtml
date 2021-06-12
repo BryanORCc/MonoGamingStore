@@ -15,16 +15,15 @@
         <a class="nav-link text-dark form-control " style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Placas"><p>Placas</p></a>
     </div>
     <h2 class="etiqueta mt-5 text-light font-weight-bold display-4">MONITORES</h2>
-
-    <div class="input-group my-3 px-0" ><!--Caja de busqueda-->
-        <input type="search" class="form-control rounded" placeholder="Buscar producto" aria-label="Busqueda" aria-describedby="search-addon" />
-        <button type="button" class="buscar btn-danger">buscar</button>
-    </div>
+    
+    <form asp-controller="Pantallas" asp-action="Monitores" class="input-group my-3 px-0">    
+        <input name="x" class="form-control rounded" type="text" placeholder="Buscar producto" aria-label="Busqueda">
+        <button class="buscar btn-danger" type="submit">Buscar</button>                      
+    </form>
     
     <div class="">
-
         <div class="filtro my-3"><!--Cajas para el filtro-->
-            <div class="cajas1" >
+            <form class="cajas1" >
                 <p class="form-control font-weight-bold" style="width: 50%;">Precio</p>
                 <select class="custom-select " required style="width: 50%;">
                     <option value="default">todos</option>
@@ -33,7 +32,7 @@
                     <option value="3">S/600 - S/900</option>
                     <option value="4">S/900 a mas</option>
                 </select>
-            </div>
+            </form>
 
             <div class="cajas1" >
                 <p class="form-control font-weight-bold" style="width: 50%;">Marca</p>

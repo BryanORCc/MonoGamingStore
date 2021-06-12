@@ -80,5 +80,71 @@ namespace MonoGamingStore.Controllers
             return View();
         }
 
+        // Buscador Monitores
+        [HttpPost]
+        public IActionResult Monitores(string x)
+        {
+            var monitores = _context.DataProductos.Where(p => p.Nombre.Equals(x)).Where(p => p.Categoria.Equals("Monitor")).ToList();
+            if(monitores.Count == 0){
+                return RedirectToAction("ProductoNoEncontrado");
+            }else{
+                return View(monitores);
+            }
+        }
+        [HttpPost]
+        public IActionResult Cases(string x)
+        {
+            var cases = _context.DataProductos.Where(p => p.Nombre.Equals(x)).Where(p => p.Categoria.Equals("Case")).ToList();
+            if(cases.Count == 0){
+                return RedirectToAction("ProductoNoEncontrado");
+            }else{
+                return View(cases);
+            }
+        }
+        [HttpPost]
+        public IActionResult Graficas(string x)
+        {
+            var graficas = _context.DataProductos.Where(p => p.Nombre.Equals(x)).Where(p => p.Categoria.Equals("Grafica")).ToList();
+            if(graficas.Count == 0){
+                return RedirectToAction("ProductoNoEncontrado");
+            }else{
+                return View(graficas);
+            }
+        }
+        [HttpPost]
+        public IActionResult Placas(string x)
+        {
+            var placas = _context.DataProductos.Where(p => p.Nombre.Equals(x)).Where(p => p.Categoria.Equals("Placa Madre")).ToList();
+            if(placas.Count == 0){
+                return RedirectToAction("ProductoNoEncontrado");
+            }else{
+                return View(placas);
+            }
+        }
+        [HttpPost]
+        public IActionResult Procesadores(string x)
+        {
+            var procesadores = _context.DataProductos.Where(p => p.Nombre.Equals(x)).Where(p => p.Categoria.Equals("Procesador")).ToList();
+            if(procesadores.Count == 0){
+                return RedirectToAction("ProductoNoEncontrado");
+            }else{
+                return View(procesadores);
+            }
+        }
+        [HttpPost]
+        public IActionResult Rams(string x)
+        {
+            var rams = _context.DataProductos.Where(p => p.Nombre.Equals(x)).Where(p => p.Categoria.Equals("Ram")).ToList();
+            if(rams.Count == 0){
+                return RedirectToAction("ProductoNoEncontrado");
+            }else{
+                return View(rams);
+            }
+        }
+
+        public IActionResult ProductoNoEncontrado()
+        {
+            return View();
+        }
     }
 }
