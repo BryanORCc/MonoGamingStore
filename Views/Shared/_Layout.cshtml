@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MonoGamingStore</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body style="background: url('../img/f_home.gif') no-repeat center fixed;
+  background-size: cover;
+">
+<!--
+<body >
+    <div id="video" class="embed-responsive embed-responsive-16by9">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fLexgOxsZu0?controls=0&amp;start=7&amp;autoplay=1&loop=1&playlist=fLexgOxsZu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+-->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom mb-3" style="background-color: #424242; opacity: 0.8;" > <!--#424242-->
+            <div class="container">
+                <img src="~/img/logo.png" alt="LOGO" width="50">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home"
+                    asp-action="Index">MonoGamingStore</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <partial name="_MenuPartial" />
+                    </ul>
+
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-center text-white">
+        <div class="row d-flex justify-content-center">
+            <div class="col-5 d-flex justify-content-center">
+                <p class="container text-center text-white">&copy; 2021 - MonoGamingStore</p>
+            </div>
+            <div class="col d-flex justify-content-around px-5">
+                <a class="text-white" asp-area="" asp-controller="Contacto" asp-action="Index"> Contáctanos </a>
+                <a class="text-white" asp-area="" asp-controller="Somos" asp-action="Index"> ¿Quiénes Somos? </a>
+                <a class="text-white" asp-area="" asp-controller="Siguenos" asp-action="Index"> Síguenos </a>
+            </div>
+        </div>
+        <div class="container d-flex justify-content-around">
+            <img src="~/img/marca1.png" alt="marca1" width="50">
+            <img src="~/img/marca2.png" alt="marca2" width="50">
+            <img src="~/img/marca3.png" alt="marca3" width="50">
+            <img src="~/img/marca4.png" alt="marca4" width="50">
+            <img src="~/img/marca5.png" alt="marca5" width="50">
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+
+</html>

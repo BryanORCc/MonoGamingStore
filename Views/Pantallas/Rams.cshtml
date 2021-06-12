@@ -1,0 +1,56 @@
+@model List<Producto>
+
+<head>
+    <link rel="stylesheet" href="~/css/estilos.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+<body class="fondo">
+    <div class="Barra text-center input-group" style="width: 100%;">
+        <a class="nav-link text-dark form-control" style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Monitores"><p>Monitores</p></a>
+        <a class="nav-link text-dark form-control " style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Graficas"><p>Graficas</p></a>
+        <a class="nav-link text-dark form-control " style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Cases"><p>Cases</p></a>
+        <a class="nav-link text-dark form-control " style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Procesadores"><p>Procesadores</p></a>
+        <a class="nav-link text-dark form-control " style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Rams"><p>Ram</p></a>
+        <a class="nav-link text-dark form-control " style="width: 25%;" asp-area="" asp-controller="Pantallas" asp-action="Placas"><p>Placas</p></a>
+    </div>
+    <h2 class="etiqueta mt-5 text-light font-weight-bold display-4">RAM'S</h2>
+
+    <div class="">
+        <div class="input-group my-3 px-0"><!--Caja de busqueda-->
+            <input type="search" class="form-control rounded" placeholder="Buscar producto" aria-label="Busqueda" aria-describedby="search-addon" />
+            <button type="button" class="buscar btn-danger">buscar</button>
+        </div>
+
+        <div class="filtro my-3"><!--Cajas para el filtro-->
+
+            <div class="cajas1">
+                <p class="form-control font-weight-bold" style="width: 50%;">Precio</p>
+                <select class="custom-select " required style="width: 50%;">
+                    <option value="default">todos</option>
+                    <option value="1">S/100 - S/300</option>
+                    <option value="2">S/300 - S/500</option>
+                    <option value="3">S/500 - S/800</option>
+                    <option value="4">S/800 a mas</option>
+                </select>
+            </div>
+            
+        </div>
+
+        <div class="objetos">
+            @foreach (var item in Model)
+            { 
+                @if(@item.Categoria.Equals("Ram")){
+                    <div class="product m-3">
+                        <img class="imagen" src="@item.Foto">
+                        <h4 class="text-center">@item.Nombre</h4>
+                        <p class="Titulo font-weight-bold">@item.Detalle</p>
+                        <p class="Precio text-danger text-center font-weight-bold">S/ @item.Precio</p>
+                        <a href="/Pantallas/Detalle/@item.ProductoId" class="btn btn-secondary">Ver Detalle</a>
+                    </div>
+                }
+            }
+        </div>
+
+    </div>
+</body>

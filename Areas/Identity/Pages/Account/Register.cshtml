@@ -1,0 +1,81 @@
+@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<div class="container row-1 my-4" style="background: #c00b0b">
+    <h1 class="text-center text-white px-3">@ViewData["Title"]</h1>
+</div>
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-md-5">
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h3 class="text-center">Crear <strong>MonoCuenta</strong> </h3>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+    <div class="col-md-5 col-md-offset-2">
+        <section>
+            <img class="mx-auto d-block" src="~/img/logo.png" style="height: 250px">
+        </section>
+        <section>
+            <div>
+                <p>
+                    Si ya tienes una <strong>MonoCuenta</strong>, ingresa <a asp-area="Identity" asp-page="/Account/Login">aquí</a> 
+                    y revisa todas las promociones que tenemos para tí. <br>
+                    Si aún no la tienes, ¿qué esperas? Regístrate ahora y forma parte de nuestros <strong>MonoClientes</strong>. ☺☻
+                </p>
+            </div>
+            <!--
+            <h4>Use another service to register.</h4>
+            <hr />
+            @{
+                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                {
+                    <div>
+                        <p>
+                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                            for details on setting up this ASP.NET application to support logging in via external services.
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div>
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins)
+                                {
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                }
+                            </p>
+                        </div>
+                    </form>
+                }
+            }
+            -->
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
