@@ -15,5 +15,6 @@ namespace MonoGamingStore.Data
         public DbSet<MonoGamingStore.Models.Contacto> DataContactos { get; set; }
 
         public DbSet<MonoGamingStore.Models.Producto> DataProductos { get; set; }
+        public DbSet<MonoGamingStore.Models.Carrito> DataCarrito { get; set; }
     }
 }

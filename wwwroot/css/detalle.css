@@ -1,6 +1,58 @@
-.fondo{
-    background: url('~/../../img/detalle/f_detalle.jpg') no-repeat center fixed; 
+html{
+    background: url(/img/pared.jpg);
     background-size: cover;
 }
 
+.fondo{
+    color: white;
+}
 
+.principal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.caja1{
+    width: 45%;
+    height: 100%;
+}
+
+.caja2{
+    width: 45%;
+    
+}
+
+.caja3{
+    width: 50%;
+}
+
+.listas{
+    list-style-type: none;
+    margin-bottom: 3%;
+    text-align: justify;
+    font-size: 130%;
+}
+
+.listas:before {
+    content: '';
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-size: 25px;
+    background-image: url("/img/logo.png");
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+
+.btn{
+    box-shadow: white 0px 0px 2px 2px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    text-shadow: black 2px 2px 2px;
+}
+
+.precio{
+    text-shadow: blue 2px 4px 2px;
+}
