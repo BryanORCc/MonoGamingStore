@@ -78,6 +78,7 @@ body {
   bottom: -150px;
   width: 100%;
   background-color: #424242;
+  opacity: 0.8;
   white-space: nowrap;
   line-height: 50px; /* Vertically center the text there */
 }
@@ -90,7 +91,7 @@ img {
 
 /*ESTILO DE LA BARRA DE NAVEGACION*/
 .Barra a{
-  background-image: url("../img/fondo_barra.gif");
+  background-image: url("../img/f_barra.gif");
   color: white;
   text-shadow: greenyellow 2px 2px 25px;
   font-weight: bold;

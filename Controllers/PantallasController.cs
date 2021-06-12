@@ -54,6 +54,8 @@ namespace MonoGamingStore.Controllers
         }
         public IActionResult Detalle(int id)
         {
+            
+            var iden = 0;
             var nombre = "";
             var foto = "";
             var detalle = "";
@@ -63,6 +65,7 @@ namespace MonoGamingStore.Controllers
             foreach (var item in producto)
             {
                 if(item.ProductoId == id){
+                    iden = item.ProductoId;
                     nombre = item.Nombre;
                     foto = item.Foto;
                     detalle = item.Detalle;
@@ -71,6 +74,7 @@ namespace MonoGamingStore.Controllers
                     break;
                 }
             }
+            ViewData["id"] = iden;
             ViewData["nombre"] = nombre;
             ViewData["foto"] = foto;
             ViewData["detalle"] = detalle;
