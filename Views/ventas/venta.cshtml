@@ -136,8 +136,7 @@
 <img class="mx-auto d-block" src="~/img/logo.png" height="60px">
 
 <div class="d-flex justify-content-end" style="width: 65%;">
-   <a href="/Pantallas/Monitores" class="btn btn-info mb-2 font-weight-bold mr-2">Seguir Comprando</a>
-   <a class="btn btn-success text-white mb-2 ml-2 mr-5 font-weight-bold">Comprar</a>
+   <a href="/Pantallas/Monitores" class="btn btn-info mb-2 font-weight-bold mr-5" style="cursor: pointer; box-shadow: white 0px 0px 2px 2px;">Seguir Comprando</a>
 </div>
 
 <div class="d-flex flex-wrap" style="width: 100%;">
@@ -174,8 +173,38 @@
       }    
   </table>
 
-   <div class="total ml-5 mb-3 border" style="background-color: white; width: 35%;">
-      <h2 class="text-center mt-3">Resumen de Compra</h2>
+   <div class="ml-5 mb-3 border text-center" style="background-color: white; width: 35%; height: fit-content;">
+      <h2 class="text-center mt-3" style="border-bottom: 2px solid black; padding-bottom: 5%;">Resumen de Compra</h2>
+      @{
+         var total = 0.0;
+         var contar = 1;
+      }
+      <table class="text-center" style="width: 100%; margin-top: 6%; margin-bottom: 6%;">
+         <tr>
+            <th>N°</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+         </tr>
+      @foreach (var item in Model){
+         <tr>
+            <td >@contar</td>
+            <td >@item.Nombre</td>
+            <td >@item.Precio</td>
+            @{
+               total = total + item.Precio;
+               contar++;
+            }
+         </tr>
+      }
+      </table>
+
+      <div class="total d-flex align-items-baseline text-center" style="border-top: 2px solid black; padding-top: 5%;">
+         <h3 style="margin-left: 25%;">Total: </h3>
+         <p style="margin-left: 5%; font-size: 150%;">S/ @total</p>
+      </div>
+      
+      <a class="btn btn-success text-white mb-5 ml-2 font-weight-bold" style="cursor: pointer; box-shadow: black 0px 0px 2px 2px;">Comprar</a>
+
    </div>
 
 </div>
