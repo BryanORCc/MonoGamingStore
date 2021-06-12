@@ -146,5 +146,16 @@ namespace MonoGamingStore.Controllers
         {
             return View();
         }
+
+        //Filtro Precios
+        public IActionResult MonitoresPrecios(string x)
+        {
+            var monitores = _context.DataProductos.Where(p => p.Precio.Equals(x)).Where(p => p.Categoria.Equals("Ram")).ToList();
+            if(monitores.Count == 0){
+                return RedirectToAction("ProductoNoEncontrado");
+            }else{
+                return View(monitores);
+            }
+        }
     }
 }
