@@ -6,6 +6,7 @@ namespace MonoGamingStore.Models
     [Table("t_carrito")]
     public class Carrito
     {
+        [Key]
         [Column("ProductoId")]
         public int ProductoId { get; set; }
 

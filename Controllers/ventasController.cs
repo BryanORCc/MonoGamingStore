@@ -16,20 +16,35 @@ namespace MonoGamingStore.Controllers
 
         public IActionResult venta()
         {
+            var listar = _context.DataCarrito.OrderBy(p => p.ProductoId).ToList();
+            return View(listar);
+        }
+
+        public IActionResult Agregar(int id)
+        {
+            var listar = _context.DataProductos.Find(id);
             Carrito c = new Carrito();
-            c.ProductoId = int.Parse(ViewData["id"].ToString());
-            c.Nombre = ViewData["nombre"].ToString();
-            c.Foto = ViewData["foto"].ToString();
-            c.Detalle = ViewData["detalle"].ToString();
-            c.Precio = double.Parse(ViewData["precio"].ToString());
-            c.Categoria = ViewData["categoria"].ToString();
+            c.ProductoId = listar.ProductoId;
+            c.Nombre = listar.Nombre;
+            c.Foto = listar.Foto;
+            c.Detalle = listar.Detalle;
+            c.Precio = listar.Precio;
+            c.Categoria = listar.Categoria;
 
             if(ModelState.IsValid){
                 _context.Add(c);
                 _context.SaveChanges();
-                return RedirectToAction("ventas");
+                return RedirectToAction("venta");
             }
             return View(c);
+        }
+
+        [HttpPost]
+        public IActionResult Eliminar(int id) {
+            var compra = _context.DataCarrito.Find(id);
+            _context.Remove(compra);
+            _context.SaveChanges();
+            return RedirectToAction("venta");
         }
     }
 }

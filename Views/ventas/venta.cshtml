@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,4 +125,58 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="~/js/Ventas.js"></script>
-<script src="~/js/alerta.js"></script>
+<script src="~/js/alerta.js"></script>-->
+
+
+@model List<Carrito>
+
+<div class="text-center container row-1 my-4" style="background: #c00b0b">
+  <h1 class="text-white" style="margin-bottom: 2%;">Carrito de Compras</h1>
+</div>
+<img class="mx-auto d-block" src="~/img/logo.png" height="60px">
+
+<div class="d-flex justify-content-end" style="width: 65%;">
+   <a href="/Pantallas/Monitores" class="btn btn-info mb-2 font-weight-bold mr-2">Seguir Comprando</a>
+   <a class="btn btn-success text-white mb-2 ml-2 font-weight-bold">Comprar</a>
+</div>
+
+<div class="d-flex flex-wrap" style="width: 100%;">
+   <table class="table table-dark border" style="width: 60%;">
+      <tr>
+          <th>Nombre del Producto</th>
+          <th>Foto del Producto</th>
+          <th>Precio</th>
+          <th>Tipo de Producto</th>
+      </tr>
+      @foreach (var item in Model)
+      {
+          <tr>
+              <td>@item.Nombre</td>
+              <td><img src="@item.Foto" width="100px"> </td>
+              <td>@item.Precio</td>
+              <td>@item.Categoria</td>
+
+              <td>
+               <form action="/ventas/Eliminar" method="post" class="d-inline-block">
+                  <input type="hidden" name="id" value="@item.ProductoId" />
+                  <button class="btn btn-danger">Quitar</button>
+               </form>
+              </td>
+          </tr>
+      }
+      @if (Model.Count == 0) {
+          <tr>
+              <td colspan="12" class="text-center">
+                  <h3>Su carrito esta vacio</h3>
+              </td>
+          </tr>
+      }    
+  </table>
+
+   <div class="total ml-5 mb-3" style="background-color: white; width: 35%;">
+      <p>Hola</p>
+   </div>
+
+</div>
+  
+

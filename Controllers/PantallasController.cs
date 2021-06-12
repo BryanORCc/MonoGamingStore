@@ -54,6 +54,7 @@ namespace MonoGamingStore.Controllers
         }
         public IActionResult Detalle(int id)
         {
+            
             var iden = 0;
             var nombre = "";
             var foto = "";
