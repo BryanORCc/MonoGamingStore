@@ -59,3 +59,4 @@ formulario.selectYear.addEventListener('change', (e) => {
 	yearExpiracion.textContent = e.target.value.slice(2);
 	mostrarFrente();
 });
+
