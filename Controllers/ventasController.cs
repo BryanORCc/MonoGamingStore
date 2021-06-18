@@ -55,7 +55,11 @@ namespace MonoGamingStore.Controllers
             return View();
         }
 
+        public IActionResult TarjetaBCP()
+        {
 
+            return View();
+        }
 
 
     }

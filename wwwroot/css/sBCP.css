@@ -28,14 +28,15 @@
 
 .tarjeta .delantera {
   width: 100%;
-  background: url(../img/Tarjetas/t_mgs.png);
+  background: url(../img/Tarjetas/t_bcp.png);
   background-size: cover;
 }
 
 .delantera .grupo .label {
   font-size: 16px;
-  color: #7d8994;
+  color: white;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 .delantera .grupo .numero,
 .delantera .grupo .nombre,
