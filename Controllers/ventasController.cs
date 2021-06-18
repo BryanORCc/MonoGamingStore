@@ -31,7 +31,8 @@ namespace MonoGamingStore.Controllers
             c.Precio = listar.Precio;
             c.Categoria = listar.Categoria;
 
-            if(ModelState.IsValid){
+            if (ModelState.IsValid)
+            {
                 _context.Add(c);
                 _context.SaveChanges();
                 return RedirectToAction("venta");
@@ -40,11 +41,22 @@ namespace MonoGamingStore.Controllers
         }
 
         [HttpPost]
-        public IActionResult Eliminar(int id) {
+        public IActionResult Eliminar(int id)
+        {
             var compra = _context.DataCarrito.Find(id);
             _context.Remove(compra);
             _context.SaveChanges();
             return RedirectToAction("venta");
         }
+
+        public IActionResult Tarjeta()
+        {
+
+            return View();
+        }
+
+
+
+
     }
 }

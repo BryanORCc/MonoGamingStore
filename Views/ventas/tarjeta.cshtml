@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MonoGamingStore</title>
+    <link rel="stylesheet" href="~/css/estil.css" />
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <section class="tarjeta" id="tarjeta">
+            <div class="delantera" style="justify-content: end;">
+                <div class="datos">
+                    <div class="grupo">
+                        <p class="label">
+                            Numero de tarjeta
+                        </p>
+                        <p class="numero">#### #### #### ####</p>
+
+                    </div>
+                    <div class="flexbox">
+                        <div class="grupo" id="nombre">
+                            <p class="label">Nombre de tarjeta </p>
+                            <p class="nombre">MONOGAMING STORE</p>
+
+                        </div>
+                        <div class="grupo" id="expiracion">
+                            <p class="label">Expiracion </p>
+                            <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+            <div class="grupo">
+                <label for="inputNumero">Número Tarjeta</label>
+                <input type="text" id="inputNumero" maxlength="19" autocomplete="off" required="" pattern="[0-9]+">
+            </div>
+            <div class="grupo">
+                <label for="inputNombre">Nombre</label>
+                <input type="text" id="inputNombre" maxlength="19" autocomplete="off" required="">
+            </div>
+            <div class="flexbox">
+                <div class="grupo expira">
+                    <label for="selectMes">Expiracion</label>
+                    <div class="flexbox">
+                        <div class="grupo-select">
+                            <select name="mes" id="selectMes">
+                                <option disabled selected>Mes</option>
+                            </select>
+                        </div>
+                        <div class="grupo-select">
+                            <select name="year" id="selectYear">
+                                <option disabled selected>Año</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grupo ccv">
+                    <label for="inputCCV">CCV</label>
+                    <input type="text" id="inputCCV" maxlength="3">
+                </div>
+            </div>
+            <button type="submit" class="btn-enviar" style="background: black;color: azure;">Enviar</button>
+        </form>
+    </div>
+    <script src="~/js/java.js"></script>
+</body>
+
+</html>
